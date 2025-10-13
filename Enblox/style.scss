@@ -41,6 +41,11 @@
 @mixin transition-1 {
   transition: all ease-in-out 0.3s;
 }
+@mixin italic-text {
+  font-size: 2rem;
+  font-family: f4;
+  font-weight: 500;
+}
 * {
   margin: 0;
   padding: 0;
@@ -289,7 +294,7 @@ nav {
     position: absolute;
     width: 95%;
     border-radius: 5px;
-    height: 20vh;
+    height: 15vh;
     filter: blur(100px);
     background: linear-gradient(
       270deg,
@@ -297,7 +302,7 @@ nav {
       rgb(255, 0, 119) 50%,
       rgb(158, 0, 161) 100%
     );
-    bottom: -10%;
+    bottom: -7%;
     z-index: 10;
   }
 
@@ -312,9 +317,7 @@ nav {
     .left {
       width: 50%;
       h6 {
-        font-size: 2rem;
-        font-family: f4;
-        font-weight: 500;
+        @include italic-text()
       }
       h2 {
         font-size: 4.5rem;
@@ -343,6 +346,47 @@ nav {
           border-color: white;
         }
       }
+    }
+  }
+}
+
+.trust {
+  width: 100%;
+  @include padding-x();
+  font-family: f2;
+  padding-block: 8rem;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .text-line {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1rem;
+      font-family: f5;
+      color: var(--sec-color);
+    }
+  }
+
+  .brands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.7rem;
+    .brand {
+      background-color: #f7f7f7;
+      @include flex-center();
+      font-size: 1.6rem;
+      font-weight: 800;
+      padding: 1.5rem 0rem;
+      border-radius: 0.5rem;
+      color: #757575;
     }
   }
 }
