@@ -46,6 +46,17 @@
   font-family: f4;
   font-weight: 500;
 }
+@mixin heading2 {
+  font-size: 3.6rem;
+  letter-spacing: -2px;
+}
+@mixin paragraph {
+  width: 80%;
+  font-size: 1rem;
+  font-family: f5;
+  font-weight: 500;
+  color: var(--sec-color);
+}
 * {
   margin: 0;
   padding: 0;
@@ -410,8 +421,7 @@ nav {
         @include italic-text();
       }
       h2 {
-        font-size: 3.6rem;
-        letter-spacing: -2px;
+        @include heading2();
       }
     }
     .right {
@@ -421,11 +431,7 @@ nav {
       align-items: end;
 
       p {
-        width: 80%;
-        font-size: 1rem;
-        font-family: f5;
-        font-weight: 500;
-        color: var(--sec-color);
+        @include paragraph();
       }
     }
   }
@@ -537,7 +543,7 @@ nav {
         background: linear-gradient(
           to bottom right,
           rgb(87, 0, 128) 0%,
-          rgb(242, 0, 109) 100%,
+          rgb(242, 0, 109) 100%
         );
         img {
           position: absolute;
@@ -558,6 +564,84 @@ nav {
           color: white;
         }
       }
+    }
+  }
+}
+
+.page5 {
+  @include padding-x();
+  font-family: f2;
+  padding-bottom: 8rem;
+
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+    .left {
+      width: 55%;
+
+      h6 {
+        @include italic-text();
+      }
+      h2 {
+        @include heading2();
+      }
+    }
+    .right {
+      width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+
+      p {
+        @include paragraph();
+      }
+    }
+  }
+}
+
+.page5-bottom {
+  display: flex;
+
+  .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .container {
+      padding: 1.5rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      h3 {
+        @include italic-text();
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        @include paragraph();
+        font-size: 0.9rem;
+      }
+      &:nth-child(1) {
+        h3 {
+          color: var(--sec-color);
+        }
+        border-left: 4px solid #f2006d;
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    @include flex-center();
+    img {
+      width: 90%;
+      height: 90vh;
+      object-fit: cover;
+      border-radius: 1.7rem;
     }
   }
 }
