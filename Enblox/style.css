@@ -649,6 +649,8 @@ nav ul li a {
   gap: 6rem;
   padding-inline: 2rem;
   font-family: f2;
+  padding-bottom: 7rem;
+  font-family: f2;
 }
 .page7 .text-content {
   display: flex;
@@ -723,4 +725,93 @@ nav ul li a {
   font-weight: 500;
   color: var(--sec-color);
   font-size: 0.9rem;
+}
+
+.page8 {
+  position: relative;
+  width: 100%;
+  font-family: f2;
+  overflow: hidden;
+}
+.page8 .text-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.page8 .text-content .customers-container {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.page8 .text-content .customers-container .customers {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 40%;
+}
+.page8 .text-content .customers-container .customers img {
+  position: relative;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50px;
+  border: 2px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page8 .text-content .customers-container .customers img:nth-child(2) {
+  transform: translateX(-30%);
+}
+.page8 .text-content .customers-container .customers img:nth-child(3) {
+  transform: translateX(-60%);
+}
+.page8 .text-content .customers-container .customers img:nth-child(4) {
+  transform: translateX(-90%);
+}
+.page8 .text-content .customers-container .customers img:nth-child(5) {
+  transform: translateX(-120%);
+}
+.page8 .text-content .customers-container p {
+  font-size: 0.9rem;
+}
+.page8 .text-content h4 {
+  font-size: 2rem;
+  font-family: f4;
+  font-weight: 500;
+}
+.page8 .text-content h2 {
+  font-size: 3.6rem;
+  letter-spacing: -2px;
+  font-size: 6rem;
+  line-height: 6rem;
+  width: 55%;
+  text-align: center;
+}
+.page8 .text-content p {
+  width: 80%;
+  font-size: 1rem;
+  font-family: f5;
+  font-weight: 500;
+  color: var(--sec-color);
+  text-align: center;
+  font-size: 1.3rem;
+  width: 68%;
+}
+.page8 .image-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.page8 .image-container img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
