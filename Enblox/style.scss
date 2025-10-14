@@ -645,3 +645,53 @@ nav {
     }
   }
 }
+
+.page6 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: f2;
+  padding-bottom: 8rem;
+
+  .content-container {
+    @include flex-center();
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    h6 {
+      @include italic-text();
+    }
+    h2 {
+      @include heading2();
+      width: 50%;
+      font-size: 4.5rem;
+      line-height: 5rem;
+    }
+    p {
+      @include paragraph();
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: f5;
+    }
+    button {
+      padding: 0.9rem 2.2rem;
+    }
+  }
+
+  .marque-container {
+    width: 100%;
+    height: 80vh;
+    background-color: red;
+    background-image: url("users\ marque.jpg");
+    background-size: cover;
+    background-position: center;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      white 15%,
+      white 85%,
+      transparent 100%
+    );
+  }
+}
