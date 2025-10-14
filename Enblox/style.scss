@@ -571,7 +571,7 @@ nav {
 .page5 {
   @include padding-x();
   font-family: f2;
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 
   .text-content {
     display: flex;
@@ -693,5 +693,88 @@ nav {
       white 85%,
       transparent 100%
     );
+  }
+}
+
+.page7 {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  @include padding-x();
+  font-family: f2;
+
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 6rem;
+      line-height: 6.5rem;
+    }
+    h3 {
+      font-size: 6rem;
+      line-height: 6rem;
+      font-family: f4;
+      font-weight: 500;
+    }
+
+    .right {
+      display: flex;
+      justify-content: end;
+      padding-top: 2rem;
+      h5 {
+        font-size: 1.8rem;
+        width: 80%;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .tips-container {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    height: 100vh;
+
+    .left {
+      width: 45%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 1.7rem;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    .right {
+      height: 100%;
+      width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: end;
+
+      .tip {
+        width: 48%;
+        padding: 1.8rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+
+        h5 {
+          @include italic-text();
+          font-size: 1.6rem;
+          color: #f2006d;
+        }
+        h4 {
+          font-size: 1.3rem;
+        }
+        p {
+          @include paragraph();
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
 }
