@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 3rem;
+  border-bottom: 1px solid;
+}
+main nav h2 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+main nav ul {
+  display: flex;
+  gap: 4rem;
+}
+main nav ul li {
+  list-style: none;
+}
+main nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+main nav .right {
+  display: flex;
+  gap: 2rem;
+}
+main nav .right div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero {
+  width: 100%;
+  padding-inline: 4rem;
+}
+.hero .hero-top {
+  display: flex;
+}
+.hero .hero-top .left {
+  width: 50%;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  padding-top: 4rem;
+}
+.hero .hero-top .left h1 {
+  font-size: 7.4rem;
+  line-height: 1.1;
+}
+.hero .hero-top .left h5 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 65%;
+}
+.hero .hero-top .left .btns {
+  display: flex;
+  gap: 2rem;
+}
+.hero .hero-top .left .btns button {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+.hero .hero-top .left .btns button i {
+  font-size: 1.5rem;
+}
+.hero .hero-top .left .btns .orange-btn {
+  color: white;
+  background-color: #FA6C19;
+}
+.hero .hero-top .left .btns .outline-btn {
+  background-color: transparent;
+  border: 1.5px solid;
+}
+.hero .hero-top .right {
+  width: 50%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero-top .right img {
+  width: 70%;
+}/*# sourceMappingURL=style.css.map */
