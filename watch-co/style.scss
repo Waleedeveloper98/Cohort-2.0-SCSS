@@ -73,13 +73,13 @@ main {
 
     .hero-top{
         display: flex;
+        height: 75vh;
 
         .left{
             width: 50%;
-            border: 1px solid;
             display: flex;
             flex-direction: column;
-            gap: 2.2rem;
+            gap: 3rem;
             padding-top: 4rem;
 
             h1{
@@ -123,13 +123,12 @@ main {
 
         .right{
             width: 50%;
-            border: 1px solid;
             display: flex;
             align-items: center;
             justify-content: center;
 
             img{
-                width: 70%;
+                height: 100%;
             }
         }
     }

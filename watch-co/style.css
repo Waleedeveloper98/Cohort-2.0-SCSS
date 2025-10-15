@@ -66,13 +66,13 @@ main nav .right div {
 }
 .hero .hero-top {
   display: flex;
+  height: 75vh;
 }
 .hero .hero-top .left {
   width: 50%;
-  border: 1px solid;
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
+  gap: 3rem;
   padding-top: 4rem;
 }
 .hero .hero-top .left h1 {
@@ -111,11 +111,10 @@ main nav .right div {
 }
 .hero .hero-top .right {
   width: 50%;
-  border: 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero .hero-top .right img {
-  width: 70%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
