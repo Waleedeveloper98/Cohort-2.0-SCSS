@@ -20,12 +20,19 @@ main {
   width: 100%;
   height: 100%;
 }
+main ::-moz-selection {
+  background-color: rgba(250, 107, 25, 0.3215686275);
+  color: black;
+}
+main ::selection {
+  background-color: rgba(250, 107, 25, 0.3215686275);
+  color: black;
+}
 main nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.8rem 3rem;
-  border-bottom: 1px solid;
 }
 main nav h2 {
   font-size: 2.5rem;
@@ -44,7 +51,11 @@ main nav ul li a {
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: capitalize;
+  transition: all ease-in-out 0.3s;
   cursor: pointer;
+}
+main nav ul li a:hover {
+  color: rgb(89, 89, 89);
 }
 main nav .right {
   display: flex;
@@ -62,6 +73,7 @@ main nav .right div {
 
 .hero {
   width: 100%;
+  padding-bottom: 8rem;
   padding-inline: 4rem;
 }
 .hero .hero-top {
@@ -76,7 +88,9 @@ main nav .right div {
   padding-top: 4rem;
 }
 .hero .hero-top .left h1 {
-  font-size: 7.4rem;
+  font-size: 7.8rem;
+  font-weight: 700;
+  letter-spacing: -3px;
   line-height: 1.1;
 }
 .hero .hero-top .left h5 {
@@ -100,21 +114,181 @@ main nav .right div {
 }
 .hero .hero-top .left .btns button i {
   font-size: 1.5rem;
+  transition: all ease-out 0.3s;
 }
 .hero .hero-top .left .btns .orange-btn {
   color: white;
-  background-color: #FA6C19;
+  background-color: #fa6c19;
+}
+.hero .hero-top .left .btns .orange-btn:hover i {
+  transform: translateX(5px) scale(1.2);
 }
 .hero .hero-top .left .btns .outline-btn {
   background-color: transparent;
   border: 1.5px solid;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  transition: all ease-out 0.3s;
+}
+.hero .hero-top .left .btns .outline-btn .circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: black;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  z-index: -1;
+  transition: all ease-in-out 0.3s;
+  transform-origin: center;
+}
+.hero .hero-top .left .btns .outline-btn:hover {
+  color: white;
+}
+.hero .hero-top .left .btns .outline-btn:hover .circle {
+  top: 0%;
 }
 .hero .hero-top .right {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 .hero .hero-top .right img {
   height: 100%;
+  transform: translateX(12%);
+}
+
+.hero-bottom {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+}
+.hero-bottom .left {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.hero-bottom .left i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.hero-bottom .left .bag {
+  width: 12vw;
+  height: 42.5vh;
+  border-radius: 100px;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+.hero-bottom .left .bag:hover {
+  scale: 1.05;
+}
+.hero-bottom .left .bag .details {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+.hero-bottom .left .bag .details .price {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.hero-bottom .left .bag .details i {
+  background-color: white;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  border-radius: 50px;
+  color: black;
+  cursor: pointer;
+}
+.hero-bottom .left .bag:nth-child(2) {
+  background-image: url(1.webp);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #fde9eb;
+}
+.hero-bottom .left .bag:nth-child(3) {
+  background-image: url(3.webp);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #e0d9f8;
+}
+.hero-bottom .left .bag:nth-child(4) {
+  background-image: url(4.webp);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #f0f0f0;
+}
+.hero-bottom .left .bag:nth-child(5) {
+  background-image: url(2.webp);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #cefbe7;
+}
+.hero-bottom .right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+  pointer-events: none;
+}
+.hero-bottom .right h2 {
+  font-size: 4.8rem;
+  font-weight: 600;
+  letter-spacing: -2.3px;
+  line-height: 1;
+}
+.hero-bottom .right .rating {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.hero-bottom .right .rating span {
+  font-weight: 400;
+}
+.hero-bottom .right p {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  width: 55%;
+  text-align: right;
+}
+.hero-bottom .right .users {
+  display: flex;
+}
+.hero-bottom .right .users .user {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: relative;
+}
+.hero-bottom .right .users .user:nth-child(1) {
+  background: url("https://t4.ftcdn.net/jpg/02/24/86/95/360_F_224869519_aRaeLneqALfPNBzg0xxMZXghtvBXkfIA.jpg") no-repeat center/cover;
+  transform: translateX(60%);
+}
+.hero-bottom .right .users .user:nth-child(2) {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWySO1uRfEacFnQe2Fn0FTk7aXbNaWl-5VEQ&s") no-repeat center/cover;
+  transform: translateX(30%);
 }/*# sourceMappingURL=style.css.map */
