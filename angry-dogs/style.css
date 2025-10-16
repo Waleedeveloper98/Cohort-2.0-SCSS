@@ -64,7 +64,7 @@ li {
 }
 
 .blur3 {
-  top: 33%;
+  top: 39%;
   right: 6%;
   background-color: rgba(218, 109, 156, 0.1333333333);
   border: 0.15rem solid rgba(218, 109, 156, 0.2784313725);
@@ -72,17 +72,18 @@ li {
 
 section {
   width: 100%;
-  height: 140vh;
+  height: 120vh;
   position: relative;
   padding-inline: 9rem;
   color: white;
+  overflow: hidden;
 }
 section #main-img {
-  width: 60%;
+  width: 58%;
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 10%);
 }
 section nav {
   display: flex;
@@ -203,7 +204,7 @@ header .text h3 {
   width: 50%;
   font-size: 1.25rem;
   margin-top: 1rem;
-  color: #291b21;
+  color: #805c6c;
 }
 .cards .dog-card {
   position: relative;
@@ -249,4 +250,41 @@ header .text h3 {
   padding: 0.6rem;
   cursor: pointer;
   border-radius: 100px;
+}
+
+.big-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, 0%);
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: none;
+  width: 20rem;
+  height: 6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.big-btn .inner {
+  border: 1.5px solid #D186B2;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.big-btn .inner p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  transform: translateX(40%);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.big-btn .inner i {
+  font-size: 2rem;
+  background-color: #EA679A;
+  color: white;
+  padding: 1.25rem;
+  cursor: pointer;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */

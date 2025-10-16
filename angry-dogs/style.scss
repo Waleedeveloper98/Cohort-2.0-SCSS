@@ -58,24 +58,25 @@ li {
   height: 4.5rem;
 }
 .blur3 {
-  top: 33%;
+  top: 39%;
   right: 6%;
   background-color: #da6d9c22;
   border: 0.15rem solid #da6d9c47;
 }
 section {
   width: 100%;
-  height: 140vh;
+  height: 120vh;
   position: relative;
   padding-inline: 9rem;
   color: white;
+  overflow: hidden;
 
   #main-img {
-    width: 60%;
+    width: 58%;
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,10%);
   }
   nav {
     @include flex();
@@ -200,7 +201,7 @@ header {
       width: 50%;
       font-size: 1.25rem;
       margin-top: 1rem;
-      color: #291b21;
+      color: #805c6c;
     }
   }
   .dog-card {
@@ -248,4 +249,41 @@ header {
       }
     }
   }
+}
+.big-btn{
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%,0%);
+    padding: .5rem;
+    border-radius: 50px;
+    border: none;
+    width: 20rem;
+    height: 6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    .inner{
+        border: 1.5px solid #D186B2;
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 1.2rem;
+            font-weight: 500;
+            transform: translateX(40%);
+             font-family: "Roboto Condensed", sans-serif;
+
+        }
+        i{
+            font-size: 2rem;
+            background-color: #EA679A;
+            color: white;
+            padding:1.25rem;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+    }
 }
