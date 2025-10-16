@@ -76,7 +76,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%,10%);
+    transform: translate(-50%, 10%);
   }
   nav {
     @include flex();
@@ -180,8 +180,6 @@ header {
         position: relative;
 
         img {
-          // transform: translateY(-16%);
-        //   height: 100%;
           transform: scale(2.3);
           transform-origin: bottom;
           position: absolute;
@@ -250,40 +248,188 @@ header {
     }
   }
 }
-.big-btn{
-    position: absolute;
-    left: 50%;
-    bottom: 15%;
-    transform: translate(-50%,0%);
-    padding: .5rem;
+.big-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, 0%);
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: none;
+  width: 20rem;
+  height: 6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  .inner {
+    border: 1.5px solid #d186b2;
+    height: 100%;
+    width: 100%;
     border-radius: 50px;
-    border: none;
-    width: 20rem;
-    height: 6rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    .inner{
-        border: 1.5px solid #D186B2;
-        height: 100%;
-        width: 100%;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p{
-            font-size: 1.2rem;
-            font-weight: 500;
-            transform: translateX(40%);
-             font-family: "Roboto Condensed", sans-serif;
-
-        }
-        i{
-            font-size: 2rem;
-            background-color: #EA679A;
-            color: white;
-            padding:1.25rem;
-            cursor: pointer;
-            border-radius: 50px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      transform: translateX(40%);
+      font-family: "Roboto Condensed", sans-serif;
     }
+    i {
+      font-size: 2rem;
+      background-color: #ea679a;
+      color: white;
+      padding: 1.25rem;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 12px;
+  }
+  section {
+    padding-inline: 3rem;
+
+    #main-img {
+      width: 100%;
+      top: 0%;
+      mask-image: linear-gradient(to top, transparent 0%, white 25%);
+    }
+  }
+  header {
+    h1 {
+      text-align: center;
+    }
+  }
+  .cards {
+    margin-top: 1rem;
+
+    .cat-card {
+      position: relative;
+
+      .content {
+        width: 35.5vw;
+
+        h5 {
+          font-size: 1.3rem;
+        }
+        .img-box {
+          height: 10rem;
+        }
+      }
+      .para {
+        color: #644653;
+      }
+    }
+    .dog-card {
+      width: 35vw;
+      .img-box {
+        height: 20vh;
+      }
+    }
+  }
+  .big-btn {
+    bottom: 18%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+  section {
+    height: 100vh;
+    padding-inline: 2rem;
+
+    #main-img {
+      //   display: none;
+      width: 95%;
+      top: 15%;
+      height: 50%;
+      object-fit: cover;
+      mask-image: linear-gradient(to top, transparent 0%, white 25%);
+    }
+    nav {
+      .logo {
+        font-size: 2rem;
+        img {
+          height: 6rem;
+        }
+      }
+      ul {
+        display: none;
+      }
+      p{
+        font-size: 3rem;
+      }
+    }
+    .cards {
+      display: none;
+    }
+  }
+  header {
+    margin-top: 5rem;
+    h1 {
+      font-size: 32rem;
+    }
+    .text {
+      display: none;
+    }
+  }
+  .big-btn {
+    bottom: 30%;
+    padding: 0.7rem;
+    width: 25rem;
+    height: 8rem;
+    .inner {
+      p {
+        font-size: 1.6rem;
+        transform: translateX(30%);
+      }
+      i {
+        font-size: 2.5rem;
+        padding: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 5px;
+  }
+  section {
+    padding-inline: 1rem;
+    overflow-x: hidden;
+
+    #main-img {
+      width: 100%;
+      top: 10%;
+      height: 70%;
+    }
+  }
+  header {
+    h1 {
+      font-size: 30rem;
+    }
+  }
+  .big-btn {
+    width: 30rem;
+    bottom: 20%;
+    .inner {
+      p {
+        font-size: 2rem;
+        transform: translateX(30%);
+      }
+      i {
+        font-size: 2.5rem;
+        padding: 1.9rem;
+      }
+    }
+  }
 }
