@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
 }
 
 html,
@@ -13,9 +12,9 @@ body {
 }
 
 :root {
-  --light-pink: #DA6D9D;
-  --dark-pink: #EE2765;
-  --white: #FEFAFB;
+  --light-pink: #da6d9d;
+  --dark-pink: #ee2765;
+  --white: #fefafb;
   --black: #170206;
 }
 
@@ -41,15 +40,49 @@ li {
   list-style: none;
 }
 
+.blur {
+  position: absolute;
+  width: 6rem;
+  height: 5rem;
+  border-radius: 1rem;
+  background-color: rgba(218, 109, 156, 0.3137254902);
+  border: 0.15rem solid rgba(218, 109, 156, 0.2784313725);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.blur1 {
+  top: 16%;
+  left: 14%;
+}
+
+.blur2 {
+  top: 13%;
+  right: 16.5%;
+  width: 5rem;
+  height: 4.5rem;
+}
+
+.blur3 {
+  top: 33%;
+  right: 6%;
+  background-color: rgba(218, 109, 156, 0.1333333333);
+  border: 0.15rem solid rgba(218, 109, 156, 0.2784313725);
+}
+
 section {
   width: 100%;
   height: 140vh;
   position: relative;
+  padding-inline: 9rem;
+  color: white;
 }
 section #main-img {
-  width: 100%;
+  width: 60%;
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 section nav {
   display: flex;
@@ -57,7 +90,8 @@ section nav {
   justify-content: space-between;
   color: white;
   text-transform: uppercase;
-  padding: 1.5rem 9rem;
+  padding: 1.5rem 0rem;
+  font-family: "Roboto Condensed", sans-serif;
 }
 section nav .logo {
   text-align: right;
@@ -89,4 +123,27 @@ section nav p {
   font-size: 1.4rem;
   font-weight: 700;
   pointer-events: none;
+}
+
+header {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  font-family: "BBH Sans Bogle", sans-serif;
+}
+header h1 {
+  font-size: 31rem;
+  line-height: 0.8;
+  font-weight: 100;
+  letter-spacing: -4px;
+}
+header .text {
+  display: flex;
+  justify-content: space-between;
+}
+header .text h3 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 0.7;
+  letter-spacing: -3px;
+  font-family: "Roboto Condensed", sans-serif;
 }/*# sourceMappingURL=style.css.map */
