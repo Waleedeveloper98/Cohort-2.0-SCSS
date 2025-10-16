@@ -146,4 +146,107 @@ header .text h3 {
   line-height: 0.7;
   letter-spacing: -3px;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+.cards {
+  margin-top: 9rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.cards .cat-card {
+  position: relative;
+}
+.cards .cat-card .content {
+  display: flex;
+  background: linear-gradient(-300deg, rgba(49, 18, 44, 0.4392156863) 10%, rgba(129, 94, 99, 0.5333333333) 70%);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  gap: 1rem;
+  width: 23.5vw;
+}
+.cards .cat-card .content h5 {
+  font-size: 1.8rem;
+}
+.cards .cat-card .content p {
+  color: #412a33;
+  font-weight: 600;
+}
+.cards .cat-card .content .img-box {
+  width: 50%;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 0.5rem;
+  background-color: #37152e;
+  position: relative;
+}
+.cards .cat-card .content .img-box img {
+  transform: scale(2.3);
+  transform-origin: bottom;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards .cat-card .content .details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cards .cat-card .para {
+  width: 50%;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: #291b21;
+}
+.cards .dog-card {
+  position: relative;
+  width: 17vw;
+  background-color: #c67293;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transform: translateY(-10%);
+}
+.cards .dog-card .img-box {
+  width: 100%;
+  height: 28vh;
+  border-radius: 0.7rem;
+  background-color: rgba(119, 53, 89, 0.7294117647);
+  position: relative;
+}
+.cards .dog-card .img-box img {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  transform-origin: bottom;
+  transform: scale(1.8);
+}
+.cards .dog-card .details {
+  display: flex;
+  padding-top: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.cards .dog-card .details h5 {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+}
+.cards .dog-card .details i {
+  font-size: 2rem;
+  color: var(--light-pink);
+  background-color: white;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: 100px;
 }/*# sourceMappingURL=style.css.map */
