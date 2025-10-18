@@ -53,10 +53,87 @@ main {
 .inner {
   max-width: 1200px;
 }
+
+nav {
+  width: 100%;
+  font-family: f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .promo {
+    background: linear-gradient(to right, #256dfb 60%, #7f41f3);
+    color: white;
+    text-align: center;
+    padding: 0.9rem 0rem;
+    font-weight: var(--font-weight-medium);
+    @include flex-center();
+    gap: 0.5rem;
+    font-size: clamp(12px, 1.2vw, 18px);
+    cursor: pointer;
+    display: none;
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  .main-nav {
+    padding: 1rem 1.5rem;
+    background-color: white;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.135);
+
+    .logo {
+      height: 2.2rem;
+      cursor: pointer;
+    }
+    ul {
+      @include flex-center();
+      gap: 1.6rem;
+      li {
+        display: none;
+        list-style: none;
+        font-size: clamp(13px, 1vw, 15px);
+        font-weight: var(--font-weight-medium);
+        a {
+          text-decoration: none;
+          color: var(--text-primary);
+          transition: all ease-in-out 0.2s;
+          padding: 0.5rem 0.7rem;
+          border-radius: 50px;
+          &:hover {
+            background-color: var(--bg-footer);
+            color: #256dfb;
+          }
+        }
+        i {
+          font-size: clamp(14px, 1.5vw, 20px);
+          cursor: pointer;
+        }
+        &:nth-last-child(2) a {
+          background-color: var(--color-blue);
+          color: white;
+          padding: 0.6rem 1.5rem;
+          font-size: 0.8rem;
+
+          border-radius: 100px;
+        }
+        &:last-child {
+          display: block;
+          i {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
 .page1 {
   @include flex-center();
   @include width-font();
-  background: linear-gradient(to top right, #fbe1eb 25%, #f3fcff 75%);
+  background: linear-gradient(to top, #fbe1eb 25%, #f3fcff 75%);
+  padding-top: clamp(60px, 20vw, 120px);
 
   .inner {
     @include inner-padding();
@@ -153,6 +230,13 @@ main {
           border: 1.5px solid var(--color-blue);
           font-size: 0.85rem;
           font-weight: var(--font-weight-bold);
+          transition: all ease 0.3s;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--color-blue);
+            color: white;
+          }
         }
         a {
           color: var(--text-primary);
@@ -160,6 +244,10 @@ main {
           font-size: 0.85rem;
           font-weight: var(--font-weight-bold);
           padding-inline: 1rem;
+          transition: all ease 0.2s;
+          &:hover {
+            color: rgba(68, 68, 68, 0.753);
+          }
         }
       }
     }
@@ -205,6 +293,13 @@ main {
         font-weight: var(--font-weight-bold);
         cursor: pointer;
         margin-top: 1rem;
+        transition: all ease 0.3s;
+
+        &:hover {
+          background-color: transparent;
+          color: var(--color-blue);
+          border: 1px solid var(--color-blue);
+        }
       }
     }
   }
@@ -226,6 +321,12 @@ main {
     font-weight: var(--font-weight-bold);
     width: fit-content;
     cursor: pointer;
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: var(--color-blue);
+      color: white;
+    }
   }
 }
 .page7 {
@@ -268,6 +369,12 @@ main {
         background-color: white;
         font-size: 0.85rem;
         font-weight: var(--font-weight-bold);
+        cursor: pointer;
+        transition: all ease 0.2s;
+        &:hover {
+          background-color: var(--color-blue);
+          color: white;
+        }
       }
       a {
         color: white;
@@ -275,6 +382,10 @@ main {
         font-size: 0.75rem;
         font-weight: var(--font-weight-medium);
         padding-inline: 1rem;
+        transition: all ease 0.2s;
+        &:hover {
+          color: rgba(255, 255, 255, 0.753);
+        }
       }
     }
   }
@@ -299,6 +410,7 @@ footer {
       }
       .logo {
         height: 2rem;
+        cursor: pointer;
       }
       .footer-menu {
         @include flex-col(3rem);
@@ -306,6 +418,10 @@ footer {
           color: var(--text-secondary);
           text-decoration: none;
           font-size: clamp(12px, 4vw, 15px);
+          transition: all ease 0.1s;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         ul {
           h5 {
@@ -353,7 +469,28 @@ footer {
 }
 
 @media (min-width: 768px) {
+  nav {
+    .promo {
+      display: block;
+    }
+    .main-nav {
+      padding: 1.2rem 4rem;
+
+      .logo {
+        height: 2.2rem;
+      }
+      ul {
+        li {
+          display: block;
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .page1 {
+    background: linear-gradient(to top right, #fbe1eb 25%, #f3fcff 75%);
     .inner {
       padding: 6rem 4rem;
       padding-bottom: 7rem;
