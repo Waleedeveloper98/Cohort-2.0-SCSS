@@ -229,6 +229,7 @@ main {
   }
 }
 .page7 {
+  @include flex-center();
   @include inner-padding();
   color: white;
   @include width-font();
@@ -274,6 +275,78 @@ main {
         font-size: 0.75rem;
         font-weight: var(--font-weight-medium);
         padding-inline: 1rem;
+      }
+    }
+  }
+}
+footer {
+  @include flex-center();
+  @include width-font();
+  background-color: var(--bg-footer);
+  .inner {
+    @include flex-col(5rem);
+    @include inner-padding(4rem, 2rem);
+    .top-footer {
+      @include flex-col(3rem);
+      align-items: flex-start;
+
+      h5,
+      a {
+        text-transform: capitalize;
+      }
+      li {
+        list-style: none;
+      }
+      .logo {
+        height: 2rem;
+      }
+      .footer-menu {
+        @include flex-col(3rem);
+        a {
+          color: var(--text-secondary);
+          text-decoration: none;
+          font-size: clamp(12px, 4vw, 15px);
+        }
+        ul {
+          h5 {
+            font-size: clamp(14px, 0.2vw + 1rem, 17px);
+          }
+          @include flex-col(1rem);
+        }
+      }
+    }
+    .bottom-footer {
+      @include flex-col(1rem);
+      align-items: center;
+      text-align: center;
+      .social-icons {
+        @include flex-center();
+        gap: 1rem;
+        i {
+          font-size: clamp(16px, 1.2vw + 1rem, 22px);
+          cursor: pointer;
+        }
+      }
+      .important-links {
+        border-top: 2px solid #eaeaea;
+        padding-block: 2rem;
+        padding-bottom: 1rem;
+        color: var(--text-secondary);
+        font-family: f2;
+        @include flex-col(1rem);
+        p {
+          font-size: clamp(12px, 4vw, 14px);
+        }
+        .links {
+          @include flex-center();
+          gap: 1rem;
+          font-size: clamp(12px, 4vw, 14px);
+          a {
+            color: var(--text-secondary);
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
@@ -394,7 +467,7 @@ main {
     }
   }
   .page7 {
-    @include inner-padding(4rem,3rem);
+    @include inner-padding(4rem, 3rem);
     .inner {
       padding: 4rem;
       background-size: 35%;
@@ -402,6 +475,33 @@ main {
       .button-links {
         flex-direction: row;
         align-items: center;
+      }
+    }
+  }
+  footer {
+    padding-bottom: 0rem;
+    .inner {
+      padding-bottom: 2rem;
+      .top-footer {
+        justify-content: space-between;
+        flex-direction: row;
+        .footer-menu {
+          gap: 7rem;
+          flex-direction: row;
+        }
+      }
+      .bottom-footer {
+        @include flex-col(1rem);
+        align-items: start;
+        text-align: start;
+        p {
+          width: 70%;
+        }
+        .important-links {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: start;
+        }
       }
     }
   }
