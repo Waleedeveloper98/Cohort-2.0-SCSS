@@ -253,6 +253,62 @@ main {
   cursor: pointer;
 }
 
+.page7 {
+  padding: 4rem 1.5rem;
+  padding-bottom: 5rem;
+  color: white;
+  font-family: f1;
+  width: 100%;
+}
+.page7 .inner {
+  width: 100%;
+  padding: 2rem;
+  padding-block: 5.5rem;
+  border-radius: 30px;
+  background-image: url(media/get-started-background.webp);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: #042449;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page7 .inner h3 {
+  font-size: clamp(24px, 11vw + 1rem, 70px);
+  width: 50%;
+  line-height: 1;
+}
+.page7 .inner p {
+  width: 85%;
+  font-size: clamp(16px, 0.1vw + 1rem, 24px);
+}
+.page7 .inner .button-links {
+  padding-top: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.page7 .inner .button-links .outline-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+  background-color: transparent;
+  color: var(--color-blue);
+  border: none;
+  background-color: white;
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+}
+.page7 .inner .button-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  padding-inline: 1rem;
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     padding: 6rem 4rem;
@@ -366,5 +422,18 @@ main {
   }
   .page6 h2 {
     line-height: 1;
+  }
+  .page7 {
+    padding: 4rem 3rem;
+    padding-bottom: 5rem;
+  }
+  .page7 .inner {
+    padding: 4rem;
+    background-size: 35%;
+    background-position: right;
+  }
+  .page7 .inner .button-links {
+    flex-direction: row;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
