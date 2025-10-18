@@ -165,7 +165,8 @@ main {
     }
   }
 }
-.page4 {
+.page4,
+.page6 {
   background: linear-gradient(to right, #fcfce2, #f5fbfe);
   @include flex-center();
   @include width-font();
@@ -209,6 +210,9 @@ main {
   }
 }
 .page5 {
+  .inner{
+    @include inner-padding(4rem,0rem);
+  }
   h2 {
     line-height: 1;
   }
@@ -297,7 +301,8 @@ main {
       }
     }
   }
-  .page4 {
+  .page4,
+  .page6 {
     padding-bottom: 0rem;
     .inner {
       @include inner-padding(0rem, 2rem);
@@ -326,11 +331,16 @@ main {
         width: 50%;
         gap: 2.2rem;
         padding-right: 5rem;
-        p{
+        p {
           width: 92%;
         }
       }
     }
     padding-block: 4rem;
+  }
+  .page6{
+    h2{
+      line-height: 1;
+    }
   }
 }
