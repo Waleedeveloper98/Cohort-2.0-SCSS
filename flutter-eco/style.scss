@@ -114,7 +114,8 @@ main {
     }
   }
 }
-.page3 {
+.page3,
+.page5 {
   @include flex-center();
   @include width-font();
   @include inner-padding(0rem);
@@ -207,6 +208,22 @@ main {
     }
   }
 }
+.page5 {
+  h2 {
+    line-height: 1;
+  }
+  .outline-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--color-blue);
+    border: 1.5px solid var(--color-blue);
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-bold);
+    width: fit-content;
+    cursor: pointer;
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -252,7 +269,8 @@ main {
       }
     }
   }
-  .page3 {
+  .page3,
+  .page5 {
     .inner {
       @include inner-padding(0rem, 2rem);
       padding-bottom: 0;
@@ -296,5 +314,23 @@ main {
         padding: 0rem 3rem;
       }
     }
+  }
+  .page5 {
+    .inner {
+      align-items: center;
+      img {
+        width: 45%;
+      }
+      .bottom {
+        justify-content: center;
+        width: 50%;
+        gap: 2.2rem;
+        padding-right: 5rem;
+        p{
+          width: 92%;
+        }
+      }
+    }
+    padding-block: 4rem;
   }
 }
