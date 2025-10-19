@@ -41,6 +41,11 @@ body {
   justify-content: center;
   gap: $gap;
 }
+@mixin flex-col($gap: 1.5rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
 @mixin padding-inline($padding: 1.5rem) {
   padding-inline: $padding;
 }
@@ -135,9 +140,7 @@ body {
     flex-direction: column;
     gap: 2.5rem;
     .top {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+      @include flex-col();
       .heading {
         h6,
         p {
@@ -183,6 +186,47 @@ body {
         font-size: clamp(14px, 3.8vw, 17px);
       }
     }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.page4,
+.page5 {
+  color: white;
+  .inner {
+    padding-top: 4rem;
+    @include padding-inline();
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    .side-glow{
+        display: none
+    }
+    .top {
+      @include flex-col(0.5rem);
+      h6,
+      p {
+        color: var(--paragraph-color);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      h6 {
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: clamp(14px, 5vw, 18px);
+      }
+      h4 {
+        font-size: clamp(30px, 8vw, 60px);
+        font-family: f2;
+        margin-block: 1vw;
+      }
+      p {
+        font-size: clamp(14px, 5vw, 24px);
+      }
+    }
+
     img {
       max-width: 100%;
     }
@@ -244,6 +288,52 @@ body {
       }
       img {
         width: 50%;
+      }
+    }
+  }
+  .page4 {
+    overflow: hidden;
+    .inner {
+      position: relative;
+      flex-direction: row-reverse;
+      .side-glow {
+        position: absolute;
+        display: block;
+        right: -33%;
+        top: -8%;
+        transform: rotate(-35deg);
+      }
+      .top {
+        width: 50%;
+        justify-content: center;
+        gap: 0rem;
+      }
+      img {
+        max-width: 50%;
+      }
+    }
+  }
+  .page5 {
+    overflow: hidden;
+    .inner {
+      position: relative;
+      flex-direction: row;
+      z-index: 10;
+      .side-glow {
+        position: absolute;
+        display: block;
+        left: -33%;
+        top: -8%;
+        transform: rotate(0deg);
+        z-index: -1;
+      }
+      .top {
+        width: 50%;
+        justify-content: center;
+        gap: 0rem;
+      }
+      img {
+        max-width: 50%;
       }
     }
   }
