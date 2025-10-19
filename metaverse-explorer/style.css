@@ -1,0 +1,107 @@
+@font-face {
+  font-family: f1;
+  src: url(fonts/ClashGrotesk-Bold.woff);
+}
+@font-face {
+  font-family: f2;
+  src: url(fonts/ClashGrotesk-Semibold.woff);
+}
+@font-face {
+  font-family: f3;
+  src: url(fonts/ClashGrotesk-Medium.woff);
+}
+@font-face {
+  font-family: f4;
+  src: url(fonts/ClashGrotesk-Regular.woff);
+}
+@font-face {
+  font-family: f5;
+  src: url(fonts/ClashGrotesk-Light.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  font-family: f4;
+}
+
+.page1 {
+  padding-inline: 1.5rem;
+}
+.page1 .inner {
+  padding-top: 14rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: column;
+  padding-bottom: 18rem;
+}
+.page1 .inner .globe {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  bottom: 20%;
+  background-size: cover;
+  pointer-events: none;
+}
+.page1 .inner h1 {
+  display: none;
+}
+.page1 .inner h4 {
+  font-size: clamp(18px, 6vw, 30px);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #6a6a6a;
+}
+.page1 .inner button {
+  border-radius: 50px;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  background-color: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: clamp(14px, 1vw + 1rem, 18px);
+}
+
+@media (min-width: 768px) {
+  .page1 {
+    overflow-y: hidden;
+  }
+  .page1 .inner {
+    background-image: url(media/085a0f77-9d3e-43e7-8674-b4a0cdd0d7ae.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    padding-bottom: 18rem;
+  }
+  .page1 .inner .globe {
+    bottom: 10%;
+    scale: 1.3;
+  }
+  .page1 .inner h1 {
+    font-size: 5vw;
+    font-family: f3;
+    display: block;
+  }
+  .page1 .inner h4 {
+    color: black;
+    width: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
