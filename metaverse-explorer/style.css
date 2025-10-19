@@ -39,18 +39,28 @@ body {
   --paragraph-color: #6a6a6a;
 }
 
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  max-width: 1340px;
+}
+
 .page1 {
   padding-inline: 1.5rem;
 }
 .page1 .inner {
-  padding-top: 14rem;
+  padding-top: 10rem;
   position: relative;
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
   flex-direction: column;
   padding-bottom: 18rem;
 }
@@ -61,6 +71,9 @@ body {
   bottom: 20%;
   background-size: cover;
   pointer-events: none;
+}
+.page1 .inner img {
+  max-width: clamp(90px, 25vw, 120px);
 }
 .page1 .inner h1 {
   display: none;
@@ -186,7 +199,7 @@ body {
 }
 .page4 .inner,
 .page5 .inner {
-  padding-top: 4rem;
+  padding-block: 6rem;
   padding-inline: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -299,6 +312,7 @@ body {
 }
 .page7 .inner {
   padding-block: 4rem;
+  padding-top: 8rem;
   padding-inline: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -325,6 +339,79 @@ body {
   border: 1px solid #6a6a6a;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+footer .inner {
+  width: 100%;
+  padding-top: 4rem;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer .inner .top-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+footer .inner .top-footer .left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+footer .inner .top-footer .left a {
+  font-size: clamp(32px, 7vw, 50px);
+}
+footer .inner .top-footer .left .icons {
+  display: flex;
+  gap: 1rem;
+}
+footer .inner .top-footer .left .icons i {
+  font-size: clamp(32px, 7vw, 44px);
+  color: var(--paragraph-color);
+  transition: all ease 0.2s;
+}
+footer .inner .top-footer .left .icons i:hover {
+  color: white;
+}
+footer .inner .top-footer .footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+footer .inner .top-footer .footer-menu h4 {
+  font-size: clamp(18px, 4.5vw, 22px);
+  font-weight: 500;
+  color: #383838;
+}
+footer .inner .top-footer .footer-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+footer .inner .top-footer .footer-menu ul a {
+  font-size: clamp(14px, 4vw, 19px);
+}
+footer .inner li {
+  list-style: none;
+}
+footer .inner a {
+  text-decoration: none;
+  color: var(--paragraph-color);
+}
+footer .inner .copywrite {
+  padding: 2.5rem 0rem 1rem 0rem;
+  border-top: 1.5px solid #383838;
+  color: var(--paragraph-color);
+  font-size: 4.5vw;
+}
+
 @media (min-width: 768px) {
   .page1 {
     overflow-y: hidden;
@@ -335,13 +422,17 @@ body {
     background-size: 90%;
     background-position: center;
     padding-bottom: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
   }
   .page1 .inner .globe {
     bottom: 10%;
     scale: 1.3;
   }
   .page1 .inner h1 {
-    font-size: 5vw;
+    font-size: clamp(40px, 5vw, 80px);
     font-family: f3;
     display: block;
   }
@@ -381,6 +472,7 @@ body {
     overflow: hidden;
   }
   .page4 .inner {
+    padding-block: 8rem;
     position: relative;
     flex-direction: row-reverse;
   }
@@ -403,6 +495,7 @@ body {
     overflow: hidden;
   }
   .page5 .inner {
+    padding-block: 8rem;
     position: relative;
     flex-direction: row;
     z-index: 10;
@@ -440,18 +533,44 @@ body {
     width: 35%;
   }
   .page7 .inner {
+    width: 100%;
+    padding-top: 12rem;
     background-image: url(media/do\ it.svg);
     background-size: cover;
     background-position: bottom;
     gap: 2.4rem;
   }
   .page7 .inner h2 {
-    color: #0E0F10;
-    font-size: 5vw;
+    color: #0e0f10;
+    font-size: clamp(40px, 5vw, 80px);
     font-family: f3;
     display: block;
-    width: 40%;
+    width: 50%;
     line-height: 1.1;
     text-align: center;
+  }
+  footer .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+  footer .inner .top-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .inner .top-footer .footer-menu {
+    flex-direction: row;
+    gap: 10rem;
+  }
+  footer .inner .top-footer .footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  footer .inner .copywrite {
+    padding: 2.5rem 0rem 1rem 0rem;
+    border-top: 1.5px solid #383838;
+    color: var(--paragraph-color);
+    font-size: clamp(16px, 4.5vw, 20px);
   }
 }/*# sourceMappingURL=style.css.map */
