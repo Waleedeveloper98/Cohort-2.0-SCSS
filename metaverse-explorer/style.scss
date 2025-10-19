@@ -32,13 +32,16 @@ body {
   background-color: black;
   font-family: f4;
 }
+:root {
+  --paragraph-color: #6a6a6a;
+}
 @mixin flex-center($gap) {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: $gap;
 }
-@mixin padding-inline($padding) {
+@mixin padding-inline($padding: 1.5rem) {
   padding-inline: $padding;
 }
 .page1 {
@@ -69,7 +72,7 @@ body {
         sans-serif;
       font-weight: 400;
       line-height: 1.1;
-      color: #6a6a6a;
+      color: var(--paragraph-color);
     }
     button {
       border-radius: 50px;
@@ -86,6 +89,44 @@ body {
     }
   }
 }
+.page2 {
+  color: white;
+  @include padding-inline();
+  .inner {
+    width: 100%;
+    text-align: center;
+    .top {
+      @include flex-center(1rem);
+      flex-direction: column;
+      .tag {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: 500;
+        font-size: clamp(13px, 0.1vw + 0.8rem, 18px);
+        padding: 0.4rem 0.8rem;
+        border: 1px solid white;
+        border-radius: 50px;
+        width: fit-content;
+      }
+      h2 {
+        font-family: f2;
+        font-size: clamp(40px, 11vw, 80px);
+        line-height: 1.1;
+      }
+      p {
+        color: var(--paragraph-color);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: clamp(13px, 1vw + 1rem, 26px);
+      }
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -95,7 +136,7 @@ body {
       background-repeat: no-repeat;
       background-size: 90%;
       background-position: center;
-      padding-bottom: 18rem;
+      padding-bottom: 28rem;
       .globe {
         bottom: 10%;
         scale: 1.3;
@@ -108,6 +149,22 @@ body {
       h4 {
         color: black;
         width: 50%;
+      }
+    }
+  }
+  .page2 {
+    padding-top: 3rem;
+    .inner {
+      .top {
+        h2 {
+          width: 50%;
+        }
+        p{
+            width: 50%;
+        }
+      }
+      img{
+        max-width: 80%;
       }
     }
   }
