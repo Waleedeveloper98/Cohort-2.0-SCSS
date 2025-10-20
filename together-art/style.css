@@ -252,6 +252,62 @@ main {
   background-image: url(media/card3.webp);
 }
 
+.page3 .inner {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.page3 .inner .top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: center;
+}
+.page3 .inner .top h6 {
+  font-size: clamp(14px, 4.5vw, 18px);
+  color: var(--purple);
+}
+.page3 .inner .top h2 {
+  font-size: clamp(26px, 10vw, 35px);
+  line-height: 1.1;
+}
+.page3 .inner .bottom {
+  border-radius: 0.8rem;
+  background: linear-gradient(to right, #e1e2e2 70%, #c5c5c4);
+  padding: 1.2rem 0.8rem 0rem 0.8rem;
+}
+.page3 .inner .bottom .teacher-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.page3 .inner .bottom .teacher-details h6 {
+  color: var(--purple);
+  font-size: clamp(14px, 4.5vw, 18px);
+}
+.page3 .inner .bottom .teacher-details h2 {
+  font-size: clamp(35px, 10vw, 50px);
+  line-height: 1.1;
+}
+.page3 .inner .bottom .teacher-details p {
+  font-family: f4;
+  font-size: clamp(15px, 5vw, 18px);
+}
+.page3 .inner .bottom .teacher-details .icons-container {
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+.page3 .inner .bottom .teacher-details .icons-container img {
+  height: 1.6rem;
+}
+.page3 .inner .bottom .teacher {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     display: flex;
@@ -304,5 +360,28 @@ main {
   }
   .page2 .inner .cards {
     flex-direction: row;
+  }
+  .page3 .inner {
+    position: relative;
+    padding-inline: 6rem;
+    gap: 6rem;
+  }
+  .page3 .inner .top h2 {
+    width: 80%;
+    margin-inline: auto;
+  }
+  .page3 .inner .bottom {
+    display: flex;
+    padding: 0rem 0rem 0rem 2rem;
+  }
+  .page3 .inner .bottom .teacher-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .page3 .inner .bottom .teacher {
+    transform: translate(-5%, -5%) scale(1.1);
+    border-radius: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
