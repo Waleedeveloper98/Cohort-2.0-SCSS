@@ -139,7 +139,7 @@ main {
           font-weight: 700;
           width: 100%;
           padding-block: 1rem;
-          font-size: 4.5vw;
+          font-size: clamp(12px, 4.5vw, 15px);
           border-radius: 0.2rem;
           cursor: pointer;
           @include flex-center(0.3rem);
@@ -315,7 +315,65 @@ main {
     }
   }
 }
+.page4 {
+  .inner {
+    @include flex-col(1.5rem);
+    @include general-padding();
+    h2 {
+      font-size: clamp(20px, 3.2vw + 1rem, 44px);
+    }
+    .learning-cards {
+      @include flex-col(1rem);
+      .card {
+        aspect-ratio: 3/2;
+        padding: 1rem;
+        border-radius: 0.8rem;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
 
+        &:hover img {
+          transform: scale(1.05) rotate(2deg);
+          filter: brightness(1.1);
+        }
+
+        img {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all ease-in-out 0.4s;
+        }
+        h4 {
+          position: relative;
+          font-size: clamp(14px, 7vw + 1rem, 20px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .page4 {
+    .inner {
+      @include inline-padding();
+
+      .learning-cards {
+        @include flex-col(1rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "learn1 learn1"
+          "learn1 learn1"
+          "learn2 learn3"
+          "learn4 learn5"
+          "learn6 learn7"
+          "learn8 learn9";
+      }
+    }
+  }
+}
 @media (min-width: 768px) {
   .page1 {
     .inner {
@@ -334,7 +392,6 @@ main {
             font-weight: 700;
             width: fit-content;
             padding-inline: 3rem;
-            font-size: 16px;
             border-radius: 0.3rem;
             @include flex-center(0.6rem);
 
@@ -360,41 +417,49 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        // background-color: rgba(255, 192, 203, 0.765);
         .video-container {
           width: 60%;
         }
-        .images-container{
-          width: 100%;
+        .images-container {
+          width: 60%;
           display: flex;
           justify-content: space-around;
           position: absolute;
           transform: translateY(-15%);
-          .left,.right{
+          .left,
+          .right {
             display: flex;
             flex-direction: column;
-            gap: 2.5rem;
+            gap: 3rem;
+            width: 50%;
           }
-          .right img{
+          .right img {
             align-self: flex-end;
-            &:nth-child(2){
-              transform: translateX(25%);
+
+            &:nth-child(1) {
+              transform: translateX(70%);
             }
-            &:nth-child(3){
-              transform: translateX(15%);
+            &:nth-child(2) {
+              transform: translateX(100%);
             }
-          }
-          .left img{
-            &:nth-child(2){
-              transform: translateX(-25%);
-            }
-             &:nth-child(3){
-              transform: translateX(-15%);
+            &:nth-child(3) {
+              transform: translateX(90%);
             }
           }
-          img{
-            width: 43%;
-            border-radius: .5rem;
+          .left img {
+            &:nth-child(1) {
+              transform: translateX(-70%);
+            }
+            &:nth-child(2) {
+              transform: translateX(-100%);
+            }
+            &:nth-child(3) {
+              transform: translateX(-90%);
+            }
+          }
+          img {
+            width: clamp(120px, 11vw + 1rem, 170px);
+            border-radius: 0.5rem;
           }
         }
       }
@@ -424,14 +489,59 @@ main {
       }
       .bottom {
         display: flex;
-        padding: 0rem 0rem 0rem 2rem;
+        padding: 2rem 0rem 0rem 2rem;
         .teacher-details {
           @include flex-col(1rem);
           justify-content: center;
         }
         .teacher {
-          transform: translate(-5%, -5%) scale(1.1);
+          width: 50%;
           border-radius: 0.8rem;
+        }
+      }
+    }
+  }
+  .page4 {
+    .inner {
+      @include inline-padding();
+
+      .learning-cards {
+        @include flex-col(1rem);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "learn1 learn1 learn2 learn3"
+          "learn1 learn1 learn4 learn5"
+          "learn6 learn7 learn8 learn9";
+
+        .card {
+          &:nth-child(1) {
+            grid-area: learn1;
+          }
+          &:nth-child(2) {
+            grid-area: learn2;
+          }
+          &:nth-child(3) {
+            grid-area: learn3;
+          }
+          &:nth-child(4) {
+            grid-area: learn4;
+          }
+          &:nth-child(5) {
+            grid-area: learn5;
+          }
+          &:nth-child(6) {
+            grid-area: learn6;
+          }
+          &:nth-child(7) {
+            grid-area: learn7;
+          }
+          &:nth-child(8) {
+            grid-area: learn8;
+          }
+          &:nth-child(9) {
+            grid-area: learn9;
+          }
         }
       }
     }
