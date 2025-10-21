@@ -400,6 +400,91 @@ main {
     }
   }
 }
+.page6 {
+  .inner {
+    @include general-padding();
+    .user-cards-container {
+      @include flex-col(1rem);
+      .user-card {
+        background-color: #00b4a9;
+        border-radius: 0.6rem;
+        padding: 0.8rem;
+        display: flex;
+        font-family: f4;
+        gap: 1rem;
+
+        &:nth-child(1) {
+          background-color: var(--lime-hover);
+        }
+        &:nth-child(2) {
+          background-color: var(--light-yellow);
+        }
+        &:nth-child(3) {
+          background-color: var(--garden--purple);
+        }
+
+        &:nth-child(4) {
+          background-color: var(--light-grayish-purple);
+
+          p {
+            font-size: 19px;
+          }
+        }
+
+        &:nth-child(5) {
+          background-color: #f34d1f;
+          color: white;
+
+          p {
+            font-size: 30px;
+            line-height: 1.1;
+          }
+        }
+
+        &:nth-child(6) {
+          background-color: #9bdfdb;
+        }
+        &:nth-child(7) {
+          background-color: var(--green);
+        }
+        &:nth-child(8) {
+          background-color: var(--light-yellow-orange);
+        }
+        &:nth-child(9) {
+          background-color: var(--light-yellow-orange);
+        }
+        &:nth-child(10) {
+          background-color: #dcadf9;
+        }
+        &:nth-child(11) {
+          background-color: var(--pink-dark);
+        }
+        &:nth-child(12) {
+          background-color: var(--orange);
+        }
+        &:nth-child(13) {
+          background-color: #dcadf9;
+          p {
+            font-size: 20px;
+          }
+        }
+        &:nth-child(14) {
+          background-color: var(--orange-dark);
+        }
+
+        .user-details {
+          @include flex-col(0.8rem);
+        }
+
+        img {
+          height: clamp(50px, 21vw, 120px);
+          border-radius: 0.7rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 600px) {
   .page4 {
@@ -613,6 +698,120 @@ main {
 
           .person-img {
             object-position: bottom;
+          }
+        }
+      }
+    }
+  }
+  .page6 {
+    .inner {
+      @include inline-padding();
+      .user-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+                            "user1 user2 user3"
+                            "user4 user4 user5"
+                            "user6 user7 user9"
+                            "user6 user8 user9"
+                            "user10 user11 user12"
+                            "user13 user13 user14"
+        ;
+        .user-card {
+          border-radius: 0.6rem;
+          padding: 0.8rem;
+          display: flex;
+          font-family: f4;
+          gap: 1rem;
+          cursor: pointer;
+
+
+          &:nth-child(1) {
+            background-color: var(--lime-hover);
+            grid-area: user1;
+          }
+          &:nth-child(2) {
+            background-color: var(--light-yellow);
+            grid-area: user2;
+          }
+          &:nth-child(3) {
+            background-color: var(--garden--purple);
+            grid-area: user3;
+          }
+
+          &:nth-child(4) {
+            background-color: var(--light-grayish-purple);
+            grid-area: user4;
+
+            p {
+              font-size: 19px;
+            }
+          }
+
+          &:nth-child(5) {
+            background-color: #f34d1f;
+            color: white;
+            grid-area: user5;
+
+            p {
+              font-size: 30px;
+              line-height: 1.1;
+            }
+          }
+
+          &:nth-child(6) {
+            background-color: #9bdfdb;
+            grid-area: user6;
+          }
+          &:nth-child(7) {
+            background-color: var(--green);
+            grid-area: user7;
+          }
+          &:nth-child(8) {
+            background-color: var(--light-yellow-orange);
+            grid-area: user8;
+          }
+          &:nth-child(9) {
+            background-color: var(--light-yellow-orange);
+            grid-area: user9;
+          }
+          &:nth-child(10) {
+            background-color: #dcadf9;
+            grid-area: user10;
+          }
+          &:nth-child(11) {
+            background-color: var(--pink-dark);
+            grid-area: user11;
+          }
+          &:nth-child(12) {
+            background-color: var(--orange);
+            grid-area: user12;
+          }
+          &:nth-child(13) {
+            background-color: #dcadf9;
+            grid-area: user13;
+            p {
+              font-size: 20px;
+            }
+          }
+          &:nth-child(14) {
+            background-color: var(--orange-dark);
+            grid-area: user14;
+          }
+
+          .user-details {
+            @include flex-col(0.8rem);
+          }
+
+          img {
+            height: clamp(50px, 21vw, 120px);
+            border-radius: 0.7rem;
+            object-fit: cover;
+            transition: all ease .6s;
+            &:hover{
+              border-radius: 100px;
+            }
           }
         }
       }
