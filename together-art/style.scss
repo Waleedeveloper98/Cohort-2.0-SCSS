@@ -145,6 +145,11 @@ main {
           cursor: pointer;
           @include flex-center(0.3rem);
           justify-content: center;
+          transition: all ease 0.4s;
+          
+          &:hover {
+            box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+          }
 
           &:nth-child(1) {
             border: 1px solid var(--border-gray);
@@ -209,6 +214,7 @@ main {
       }
       .images-container {
         display: none;
+        pointer-events: none
       }
     }
   }
