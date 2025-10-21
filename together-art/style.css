@@ -84,7 +84,8 @@ body {
   --white-2: white;
 }
 
-section {
+section,
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,13 +149,16 @@ main {
   border: 1px solid var(--border-gray);
   background-color: transparent;
 }
+.page1 .inner .top .btns button:nth-child(1) i {
+  font-size: clamp(14px, 4.5vw, 16px);
+}
 .page1 .inner .top .btns button:nth-child(2) {
   background-color: var(--purple);
   color: var(--white-2);
   border: none;
 }
 .page1 .inner .top .btns button:nth-child(2) svg {
-  height: 3vh;
+  height: clamp(14px, 3vh, 16px);
 }
 .page1 .inner .bottom {
   width: 100%;
@@ -233,7 +237,7 @@ main {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  height: clamp(500px, 35vh, 600px);
+  aspect-ratio: 3/5;
 }
 .page2 .inner .cards .card .content {
   padding: 1rem;
@@ -354,7 +358,7 @@ main {
 }
 .page4 .inner .learning-cards .card h4 {
   position: relative;
-  font-size: clamp(14px, 7vw + 1rem, 20px);
+  font-size: clamp(14px, 7vw + 1rem, 16px);
 }
 
 .page5 .inner {
@@ -426,10 +430,13 @@ main {
 .page6 .inner .user-cards-container .user-card {
   background-color: #00b4a9;
   border-radius: 0.6rem;
-  padding: 0.8rem;
+  padding: clamp(5px, 0.8rem, 8px);
   display: flex;
   font-family: f4;
   gap: 1rem;
+}
+.page6 .inner .user-cards-container .user-card p {
+  font-size: clamp(14px, 4vw, 16px);
 }
 .page6 .inner .user-cards-container .user-card:nth-child(1) {
   background-color: var(--lime-hover);
@@ -444,14 +451,13 @@ main {
   background-color: var(--light-grayish-purple);
 }
 .page6 .inner .user-cards-container .user-card:nth-child(4) p {
-  font-size: 19px;
+  font-size: clamp(14px, 4vw, 18px);
 }
 .page6 .inner .user-cards-container .user-card:nth-child(5) {
   background-color: #f34d1f;
   color: white;
 }
 .page6 .inner .user-cards-container .user-card:nth-child(5) p {
-  font-size: 30px;
   line-height: 1.1;
 }
 .page6 .inner .user-cards-container .user-card:nth-child(6) {
@@ -579,6 +585,61 @@ main {
   text-align: center;
 }
 
+footer .inner {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-direction: column;
+  text-align: center;
+}
+footer .inner h5 {
+  font-size: clamp(28px, 11vw, 40px);
+  font-family: f2;
+}
+footer .inner button {
+  background-color: var(--purple);
+  border: none;
+  color: white;
+  font-family: f2;
+  padding: 0.7rem 2.5rem;
+  border-radius: 50px;
+  font-size: clamp(12px, 4.5vw, 16px);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .inner button svg {
+  height: clamp(14px, 2vh, 18px);
+}
+footer .inner .links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .inner .links a {
+  font-size: clamp(11px, 4vw, 14px);
+  font-family: f2;
+  text-transform: capitalize;
+}
+footer .inner p {
+  font-family: f4;
+  font-size: clamp(10px, 3.5vw, 13px);
+}
+footer .inner .terms {
+  font-family: f4;
+  font-size: clamp(10px, 3.5vw, 13px);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
 @media (min-width: 600px) {
   .page4 .inner {
     padding-inline: 6rem;
@@ -645,16 +706,10 @@ main {
   .page1 .inner .top .btns button:nth-child(1) {
     border: 1.5px solid var(--border-gray);
   }
-  .page1 .inner .top .btns button:nth-child(1) i {
-    font-size: 20px;
-  }
   .page1 .inner .top .btns button:nth-child(2) {
     background-color: var(--purple);
     color: var(--white-2);
     border: none;
-  }
-  .page1 .inner .top .btns button:nth-child(2) svg {
-    height: 3.2vh;
   }
   .page1 .inner .bottom {
     display: flex;
@@ -835,17 +890,10 @@ main {
     background-color: var(--light-grayish-purple);
     grid-area: user4;
   }
-  .page6 .inner .user-cards-container .user-card:nth-child(4) p {
-    font-size: 19px;
-  }
   .page6 .inner .user-cards-container .user-card:nth-child(5) {
     background-color: #f34d1f;
     color: white;
     grid-area: user5;
-  }
-  .page6 .inner .user-cards-container .user-card:nth-child(5) p {
-    font-size: 30px;
-    line-height: 1.1;
   }
   .page6 .inner .user-cards-container .user-card:nth-child(6) {
     background-color: #9bdfdb;
@@ -892,7 +940,7 @@ main {
     gap: 0.8rem;
   }
   .page6 .inner .user-cards-container .user-card img {
-    height: clamp(50px, 21vw, 120px);
+    height: clamp(45px, 21vw, 60px);
     border-radius: 0.7rem;
     -o-object-fit: cover;
        object-fit: cover;
@@ -908,5 +956,13 @@ main {
   }
   .page7 .inner {
     padding-inline: 6rem;
+  }
+  footer .inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer .inner button {
+    padding: 1.1rem 3.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

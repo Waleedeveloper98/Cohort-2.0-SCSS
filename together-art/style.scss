@@ -97,7 +97,8 @@ body {
 @mixin inline-padding {
   padding-inline: 6rem;
 }
-section {
+section,
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,6 +149,10 @@ main {
           &:nth-child(1) {
             border: 1px solid var(--border-gray);
             background-color: transparent;
+
+            i {
+              font-size: clamp(14px, 4.5vw, 16px);
+            }
           }
 
           &:nth-child(2) {
@@ -156,7 +161,7 @@ main {
             border: none;
 
             svg {
-              height: 3vh;
+              height: clamp(14px, 3vh, 16px);
             }
           }
         }
@@ -234,7 +239,7 @@ main {
         overflow: hidden;
         background-size: cover;
         background-position: center;
-        height: clamp(500px, 35vh, 600px);
+        aspect-ratio: 3/5;
 
         .content {
           padding: 1rem;
@@ -347,7 +352,7 @@ main {
         }
         h4 {
           position: relative;
-          font-size: clamp(14px, 7vw + 1rem, 20px);
+          font-size: clamp(14px, 7vw + 1rem, 16px);
         }
       }
     }
@@ -409,11 +414,13 @@ main {
       .user-card {
         background-color: #00b4a9;
         border-radius: 0.6rem;
-        padding: 0.8rem;
+        padding: clamp(5px, 0.8rem, 8px);
         display: flex;
         font-family: f4;
         gap: 1rem;
-
+        p {
+          font-size: clamp(14px, 4vw, 16px);
+        }
         &:nth-child(1) {
           background-color: var(--lime-hover);
         }
@@ -428,7 +435,7 @@ main {
           background-color: var(--light-grayish-purple);
 
           p {
-            font-size: 19px;
+            font-size: clamp(14px, 4vw, 18px);
           }
         }
 
@@ -437,7 +444,6 @@ main {
           color: white;
 
           p {
-            font-size: 30px;
             line-height: 1.1;
           }
         }
@@ -563,6 +569,53 @@ main {
     }
   }
 }
+footer {
+  .inner {
+    @include general-padding();
+    @include flex-center(0.6rem);
+    flex-direction: column;
+    text-align: center;
+    h5 {
+      font-size: clamp(28px, 11vw, 40px);
+      font-family: f2;
+    }
+    button {
+      background-color: var(--purple);
+      border: none;
+      color: white;
+      font-family: f2;
+      padding: 0.7rem 2.5rem;
+      border-radius: 50px;
+      font-size: clamp(12px, 4.5vw, 16px);
+      @include flex-center(0.5rem);
+      svg {
+        height: clamp(14px, 2vh, 18px);
+      }
+    }
+    .links {
+      @include flex-center(2rem);
+      a {
+        font-size: clamp(11px, 4vw, 14px);
+        font-family: f2;
+        text-transform: capitalize;
+      }
+    }
+    p {
+      font-family: f4;
+      font-size: clamp(10px, 3.5vw, 13px);
+    }
+    .terms {
+      font-family: f4;
+      font-size: clamp(10px, 3.5vw, 13px);
+      text-transform: capitalize;
+      @include flex-center(1rem);
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 @media (min-width: 600px) {
   .page4 {
@@ -633,18 +686,11 @@ main {
 
             &:nth-child(1) {
               border: 1.5px solid var(--border-gray);
-              i {
-                font-size: 20px;
-              }
             }
             &:nth-child(2) {
               background-color: var(--purple);
               color: var(--white-2);
               border: none;
-
-              svg {
-                height: 3.2vh;
-              }
             }
           }
         }
@@ -829,7 +875,9 @@ main {
           font-family: f4;
           gap: 1rem;
           cursor: pointer;
-
+          p {
+            // font-size: 15px;
+          }
           &:nth-child(1) {
             background-color: var(--lime-hover);
             grid-area: user1;
@@ -846,21 +894,12 @@ main {
           &:nth-child(4) {
             background-color: var(--light-grayish-purple);
             grid-area: user4;
-
-            p {
-              font-size: 19px;
-            }
           }
 
           &:nth-child(5) {
             background-color: #f34d1f;
             color: white;
             grid-area: user5;
-
-            p {
-              font-size: 30px;
-              line-height: 1.1;
-            }
           }
 
           &:nth-child(6) {
@@ -908,7 +947,7 @@ main {
           }
 
           img {
-            height: clamp(50px, 21vw, 120px);
+            height: clamp(45px, 21vw, 60px);
             border-radius: 0.7rem;
             object-fit: cover;
             transition: all ease 0.6s;
@@ -926,6 +965,14 @@ main {
   .page7 {
     .inner {
       @include inline-padding();
+    }
+  }
+  footer {
+    .inner {
+      @include flex-center(1rem);
+      button {
+        padding: 1.1rem 3.5rem;
+      }
     }
   }
 }
