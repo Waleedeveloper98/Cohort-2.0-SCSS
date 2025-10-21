@@ -353,6 +353,53 @@ main {
     }
   }
 }
+.page5 {
+  .inner {
+    @include flex-col(2rem);
+    @include general-padding();
+    .top {
+      @include flex-col(1.2rem);
+      h2 {
+        font-size: clamp(24px, 8vw, 44px);
+      }
+      .benefits-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        .benefit {
+          padding-block: 1rem;
+          @include flex-col(0.8rem);
+          h4 {
+            font-size: clamp(16px, 5vw + 1rem, 24px);
+          }
+          p {
+            font-family: f4;
+            font-size: clamp(14px, 0.1vw + 1rem, 20px);
+            width: 95%;
+          }
+        }
+      }
+    }
+    .bottom {
+      width: 100%;
+      border-radius: 1rem;
+      position: relative;
+      .bg-img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: inherit;
+      }
+      .person-img {
+        position: absolute;
+        bottom: 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
 
 @media (min-width: 600px) {
   .page4 {
@@ -541,6 +588,31 @@ main {
           }
           &:nth-child(9) {
             grid-area: learn9;
+          }
+        }
+      }
+    }
+  }
+  .page5 {
+    .inner {
+      flex-direction: row-reverse;
+      @include inline-padding();
+      align-items: center;
+      .top {
+        width: 50%;
+        @include flex-col(1.2rem);
+        .benefits-container {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .bottom {
+        width: 50%;
+        height: fit-content;
+        .bg-img {
+          border-radius: inherit;
+
+          .person-img {
+            object-position: bottom;
           }
         }
       }
