@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: f1;
   src: url(fonts/656b86fa3fe3596cc68938b1_TTCommonsProBold.woff2);
@@ -32,34 +31,12 @@ body {
 }
 
 :root {
-  --ui--surface: #f7faf5;
   --text--default: #201116;
-  --black: #201116;
   --white: #fafaf5;
-  --ui--inverted: #192015;
-  --lime-300: #bef264;
   --lime-hover: #9fcb54;
-  --ui--highlight: #bde1aa;
-  --ui--muted: #dae5d3;
-  --ui--faint: #e8f1e3;
   --purple: #a034f6;
-  --accent--indigo-100: #e0e7ff;
-  --primary--default: var(--lime-300);
-  --text--highlight: var(--lime-300);
-  --transparent: transparent;
-  --white-fff: white;
   --border-gray: #cecece;
-  --ui--faint-v2: #f1f0e3;
-  --ui--teal: #5eead4;
-  --accent--bebe: #dbeafe;
-  --accent--indigo: var(--lime-300);
-  --text--inverted: #ffe7ef;
-  --garden--blue: #afe9fe;
-  --garden--pink: #ffafe9;
   --garden--purple: #cfafff;
-  --garden--beige: #ffe4af;
-  --garden--dark-pink: #ffbdaf;
-  --garden--olive: var(--lime-300);
   --green: #96d470;
   --light-yellow: #f2ee8f;
   --orange: #f4c4a9;
@@ -70,17 +47,6 @@ body {
   --teal: #00b4a9;
   --pink: #ff6375;
   --yellow: #fda801;
-  --maroon: #bb4b1c;
-  --black-2: black;
-  --ui--mid: #b6c2b0;
-  --text--muted: #b5a4aa;
-  --text--faint: #ebd5dc;
-  --primary--dark: #d63c5a;
-  --primary--light: #ff94c6;
-  --accent--mandarina: #fb923c;
-  --accent--solecito: #facc15;
-  --secondary--bebé: #dbeafe;
-  --hover--default: rgba(32, 17, 22, 0.1);
   --white-2: white;
 }
 
