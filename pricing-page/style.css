@@ -5,6 +5,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #f5f6ff;
+  --color-primary: #7b77ff;
+  --color-secondary: #fcd77f;
+  --color-accent: #8fdafd;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+  --color-text: #505052;
+  --color-text-muted: #5f5f5f;
+  --gradient-purple: linear-gradient(6deg, white 65%, #d4dbff);
+  --gradient-yellow: linear-gradient(6deg, white 65%, #fff4dc);
+  --gradient-blue: linear-gradient(6deg, white 65%, #d8f3ff);
+  --font-main: "Inter", sans-serif;
+  --font-alt: "Roboto", sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
 html,
 body {
   width: 100%;
@@ -15,10 +33,6 @@ html {
   font-size: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
 }
 
-:root {
-  --bg-color: #f5f6ff;
-}
-
 main {
   width: 100%;
   height: 100%;
@@ -26,7 +40,7 @@ main {
 }
 
 section {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-main);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,21 +74,32 @@ section .inner header .right {
   gap: 1rem;
 }
 section .inner header .right p {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-alt);
   font-size: clamp(12px, 3.5vw, 14px);
-  color: #5f5f5f;
+  color: var(--color-text-muted);
 }
 section .inner header .right .durations button {
   cursor: pointer;
   border-radius: 50px;
   padding: 0.5rem 1rem;
   border: none;
-  background-color: white;
+  background-color: var(--color-light);
   text-transform: capitalize;
+  transition: var(--transition);
 }
 section .inner header .right .durations button:nth-child(1) {
-  background-color: #7b77ff;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+section .inner header .right .durations button:nth-child(2):hover {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  box-shadow: var(--shadow);
+}
+section .inner header .right .durations:has(button:nth-child(2):hover) button:nth-child(1) {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  box-shadow: var(--shadow);
 }
 section .inner .cards-container {
   display: flex;
@@ -83,6 +108,7 @@ section .inner .cards-container {
   width: 100%;
 }
 section .inner .cards-container .card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -90,24 +116,40 @@ section .inner .cards-container .card {
   padding: 2rem 1.2rem;
   border-radius: 0.8rem;
   border: 1.5px solid rgba(212, 219, 255, 0.3);
-  background: linear-gradient(6deg, white 65%, #d4dbff);
+  transition: var(--transition);
+  background: var(--gradient-purple);
+}
+section .inner .cards-container .card:nth-child(1):hover #main-icon {
+  color: #a4b1fe;
+}
+section .inner .cards-container .card:nth-child(3):hover #main-icon {
+  color: var(--color-accent);
+}
+section .inner .cards-container .card:nth-child(2) {
+  transform: scale(1.1);
+}
+section .inner .cards-container .card:hover {
+  transform: scale(1.05);
 }
 section .inner .cards-container .card:nth-child(1) #main-icon {
   color: #c3ccfe;
 }
 section .inner .cards-container .card:nth-child(2) {
-  background: linear-gradient(6deg, white 65%, #fff4dc);
+  background: var(--gradient-yellow);
   border: 1.5px solid rgba(252, 218, 160, 0.3);
 }
 section .inner .cards-container .card:nth-child(2) #main-icon {
-  color: #fce7b4 !important;
+  color: #fce7b4;
+}
+section .inner .cards-container .card:nth-child(2):hover #main-icon {
+  color: var(--color-secondary);
 }
 section .inner .cards-container .card:nth-child(2) button {
-  background-color: black !important;
-  color: white;
+  background-color: var(--color-dark) !important;
+  color: var(--color-light);
 }
 section .inner .cards-container .card:nth-child(3) {
-  background: linear-gradient(6deg, white 65%, #d8f3ff);
+  background: var(--gradient-blue);
   border: 1.5px solid rgba(183, 231, 254, 0.3);
 }
 section .inner .cards-container .card:nth-child(3) #main-icon {
@@ -119,6 +161,7 @@ section .inner .cards-container .card li {
 section .inner .cards-container .card #main-icon {
   font-size: clamp(35px, 12vw, 50px);
   color: #d4dbff;
+  transition: var(--transition);
 }
 section .inner .cards-container .card .top-with-icon {
   display: flex;
@@ -139,7 +182,7 @@ section .inner .cards-container .card .plan-intro h3 {
 }
 section .inner .cards-container .card .plan-intro p {
   font-size: clamp(11px, 3.5vw, 14.5px);
-  color: #505052;
+  color: var(--color-text);
 }
 section .inner .cards-container .card .price-btn {
   display: flex;
@@ -164,6 +207,13 @@ section .inner .cards-container .card .price-btn button {
   background-color: white;
   border: 1px solid #cbcbcb;
   cursor: pointer;
+  font-family: var(--font-main);
+  transition: var(--transition);
+}
+section .inner .cards-container .card .price-btn button:hover {
+  background-color: black;
+  color: white;
+  box-sizing: var(--shadow);
 }
 section .inner .cards-container .card .include-list ul {
   display: flex;
@@ -194,7 +244,7 @@ section .inner .cards-container .card .include-list ul li h6 {
 
 @media (min-width: 768px) {
   section .inner {
-    padding-block: 3rem;
+    padding-bottom: 10rem;
     padding-inline: 2rem;
     display: flex;
     flex-direction: column;
