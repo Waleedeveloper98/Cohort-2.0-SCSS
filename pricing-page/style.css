@@ -27,13 +27,18 @@ main {
 
 section {
   font-family: "Inter", sans-serif;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-color);
 }
 section .inner {
+  max-width: 1280px;
   padding-inline: 1rem;
   padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 section .inner header {
   display: flex;
@@ -41,7 +46,7 @@ section .inner header {
   gap: 2rem;
 }
 section .inner header h1 {
-  font-size: clamp(40px, 12.2vw, 80px);
+  font-size: clamp(40px, 12.2vw, 70px);
   line-height: 0.9;
   font-weight: 500;
 }
@@ -56,7 +61,7 @@ section .inner header .right {
 }
 section .inner header .right p {
   font-family: "Roboto", sans-serif;
-  font-size: clamp(12px, 3.5vw, 15px);
+  font-size: clamp(12px, 3.5vw, 14px);
   color: #5f5f5f;
 }
 section .inner header .right .durations button {
@@ -71,10 +76,129 @@ section .inner header .right .durations button:nth-child(1) {
   background-color: #7b77ff;
   color: white;
 }
+section .inner .cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+section .inner .cards-container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 1.2rem;
+  border-radius: 0.8rem;
+  border: 1.5px solid rgba(212, 219, 255, 0.3);
+  background: linear-gradient(6deg, white 65%, #d4dbff);
+}
+section .inner .cards-container .card:nth-child(1) #main-icon {
+  color: #c3ccfe;
+}
+section .inner .cards-container .card:nth-child(2) {
+  background: linear-gradient(6deg, white 65%, #fff4dc);
+  border: 1.5px solid rgba(252, 218, 160, 0.3);
+}
+section .inner .cards-container .card:nth-child(2) #main-icon {
+  color: #fce7b4 !important;
+}
+section .inner .cards-container .card:nth-child(2) button {
+  background-color: black !important;
+  color: white;
+}
+section .inner .cards-container .card:nth-child(3) {
+  background: linear-gradient(6deg, white 65%, #d8f3ff);
+  border: 1.5px solid rgba(183, 231, 254, 0.3);
+}
+section .inner .cards-container .card:nth-child(3) #main-icon {
+  color: #b9e9ff;
+}
+section .inner .cards-container .card li {
+  list-style: none;
+}
+section .inner .cards-container .card #main-icon {
+  font-size: clamp(35px, 12vw, 50px);
+  color: #d4dbff;
+}
+section .inner .cards-container .card .top-with-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+section .inner .cards-container .card .top-with-icon h6 {
+  background: radial-gradient(ellipse closest-side at center, white 0%, #fee6b5 99%);
+  font-size: 11px;
+  padding: 0.4rem 0.5rem;
+  border-radius: 50px;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.171);
+}
+section .inner .cards-container .card .plan-intro h3 {
+  text-transform: capitalize;
+  font-size: clamp(17px, 6vw, 22px);
+  font-weight: 600;
+}
+section .inner .cards-container .card .plan-intro p {
+  font-size: clamp(11px, 3.5vw, 14.5px);
+  color: #505052;
+}
+section .inner .cards-container .card .price-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+section .inner .cards-container .card .price-btn h4 {
+  font-size: clamp(14px, 4.5vw, 16px);
+  font-weight: 300;
+  color: #949393;
+}
+section .inner .cards-container .card .price-btn h4 span {
+  font-weight: 600;
+  font-size: clamp(24px, 7vw, 32px);
+  color: black;
+}
+section .inner .cards-container .card .price-btn button {
+  font-size: clamp(13px, 4.2vw, 16px);
+  font-weight: 600;
+  padding: 0.6rem 0rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  border: 1px solid #cbcbcb;
+  cursor: pointer;
+}
+section .inner .cards-container .card .include-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+section .inner .cards-container .card .include-list ul h5 {
+  color: #949494;
+  margin-bottom: 0.7rem;
+}
+section .inner .cards-container .card .include-list ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+section .inner .cards-container .card .include-list ul li i {
+  background-color: #f2efff;
+  border-radius: 50px;
+  font-size: clamp(9px, 3vw, 12px);
+  padding: 0.1rem;
+  color: #b6afdb;
+  border: 1px solid #c0bae0;
+}
+section .inner .cards-container .card .include-list ul li h6 {
+  font-size: clamp(10px, 3vw, 12.5px);
+  font-weight: 400;
+}
 
 @media (min-width: 768px) {
   section .inner {
-    padding-inline: 4rem;
+    padding-block: 3rem;
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
   }
   section .inner header {
     flex-direction: row;
@@ -87,5 +211,15 @@ section .inner header .right .durations button:nth-child(1) {
   }
   section .inner header .right {
     width: 40%;
+  }
+  section .inner .cards-container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  section .inner .cards-container .card {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }/*# sourceMappingURL=style.css.map */
