@@ -146,6 +146,7 @@ section {
 .inner .card .card-content .tags {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .inner .card .card-content .tags li {
