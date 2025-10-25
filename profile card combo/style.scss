@@ -199,5 +199,55 @@ section {
       }
     }
   }
-  
+  #card2 {
+    header {
+      width: 98%;
+      height: 98%;
+      margin-inline: auto;
+      background: url("header.png") center / cover;
+    }
+    .user-personal-details {
+      .name-role {
+        h3 {
+          color: white;
+        }
+
+        h6 {
+          color: #e3e3e3;
+        }
+      }
+
+      i {
+        border: 1px solid var(--clr-bg);
+        color: white;
+      }
+    }
+    .tags {
+      li {
+        background-color: #2b2233;
+        color: white;
+
+        &:last-child {
+          background-color: transparent;
+          border: 1px solid var(--clr-bg);
+        }
+      }
+    }
+    .user-stats {
+      padding-block: 0.5rem;
+
+      .stat {
+        border-right: none;
+        color: white;
+
+        p {
+          color: var(--clr-bg);
+        }
+      }
+    }
+    button {
+        background-color: white;
+        color: black;
+      }
+  }
 }

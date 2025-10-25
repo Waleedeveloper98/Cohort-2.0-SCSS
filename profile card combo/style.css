@@ -173,4 +173,42 @@ section .card .card-content button {
   background-color: var(--clr-btn-bg);
   color: var(--clr-btn-text);
   font-weight: 600;
+}
+section #card2 header {
+  width: 98%;
+  height: 98%;
+  margin-inline: auto;
+  background: url("header.png") center/cover;
+}
+section #card2 .user-personal-details .name-role h3 {
+  color: white;
+}
+section #card2 .user-personal-details .name-role h6 {
+  color: #e3e3e3;
+}
+section #card2 .user-personal-details i {
+  border: 1px solid var(--clr-bg);
+  color: white;
+}
+section #card2 .tags li {
+  background-color: #2b2233;
+  color: white;
+}
+section #card2 .tags li:last-child {
+  background-color: transparent;
+  border: 1px solid var(--clr-bg);
+}
+section #card2 .user-stats {
+  padding-block: 0.5rem;
+}
+section #card2 .user-stats .stat {
+  border-right: none;
+  color: white;
+}
+section #card2 .user-stats .stat p {
+  color: var(--clr-bg);
+}
+section #card2 button {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
