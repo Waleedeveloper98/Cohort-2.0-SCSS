@@ -77,7 +77,7 @@ section {
   border-radius: inherit;
   position: absolute;
   padding: clamp(50px, 4.5rem, 70px);
-  background: url("header.png") center/cover;
+  background: url("bg.webp") center/cover;
 }
 .inner .card .card-content {
   position: relative;
@@ -215,7 +215,6 @@ section {
   width: 98%;
   height: 98%;
   margin-inline: auto;
-  background: url("header.png") center/cover;
 }
 .inner #card2 .user-personal-details .name-role h3 {
   color: var(--clr-card2-text);
