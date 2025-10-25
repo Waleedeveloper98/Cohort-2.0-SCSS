@@ -9,6 +9,16 @@
   --clr-accent: #1bbe71;
   --clr-btn-bg: #000000;
   --clr-btn-text: #ffffff;
+  --transition: all ease 0.25s;
+  --transition2: all ease 0.4s;
+  --clr-card2-bg: #2b2233;
+  --clr-card2-text: #ffffff;
+  --clr-card2-subtext: #e3e3e3;
+  --clr-card2-border: var(--clr-bg);
+  --clr-card2-btn-bg: #ffffff;
+  --clr-card2-btn-text: #000000;
+  --clr-card2-btn-hover-bg: #000000;
+  --clr-card2-btn-hover-text: #ffffff;
 }
 
 * {
@@ -31,17 +41,26 @@ html {
 }
 
 section {
+  min-height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 3rem;
   padding: 4rem 1.5rem;
 }
-section li {
+.inner li {
   list-style: none;
 }
-section .card {
+.inner .card {
   position: relative;
   width: 100%;
   background-color: var(--clr-surface);
@@ -52,17 +71,18 @@ section .card {
   display: flex;
   justify-content: center;
 }
-section .card header {
+.inner .card header {
   width: 98%;
   margin-inline: auto;
   border-radius: inherit;
   position: absolute;
-  padding: 4.5rem;
+  padding: clamp(50px, 4.5rem, 70px);
   background: url("header.png") center/cover;
 }
-section .card .card-content {
+.inner .card .card-content {
   position: relative;
-  padding-top: 6rem;
+  width: 100%;
+  padding-top: clamp(60px, 6rem, 75px);
   padding-inline: 1rem;
   text-transform: capitalize;
   display: flex;
@@ -70,13 +90,13 @@ section .card .card-content {
   justify-content: center;
   gap: 1rem;
 }
-section .card .card-content .profile-image {
+.inner .card .card-content .profile-image {
   position: relative;
   width: 6rem;
   height: 6rem;
-  border-radius: 50px;
+  border-radius: 100px;
 }
-section .card .card-content .profile-image::before {
+.inner .card .card-content .profile-image::before {
   content: "";
   position: absolute;
   width: 0.9rem;
@@ -88,59 +108,67 @@ section .card .card-content .profile-image::before {
   background-color: var(--clr-accent);
   border: 1.5px solid var(--clr-surface);
 }
-section .card .card-content .profile-image img {
+.inner .card .card-content .profile-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
 }
-section .card .card-content .user-personal-details {
+.inner .card .card-content .user-personal-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-section .card .card-content .user-personal-details .name-role h3 {
-  font-size: 6vw;
+.inner .card .card-content .user-personal-details .name-role h3 {
+  font-size: clamp(18px, 6vw, 24px);
   font-weight: 600;
   letter-spacing: -0.5px;
 }
-section .card .card-content .user-personal-details .name-role h6 {
+.inner .card .card-content .user-personal-details .name-role h6 {
   font-weight: 500;
-  font-size: 3.2vw;
+  font-size: clamp(10px, 3.2vw, 14px);
   color: var(--clr-text-secondary);
 }
-section .card .card-content .user-personal-details i {
-  font-size: 4.4vw;
+.inner .card .card-content .user-personal-details i {
+  font-size: clamp(14px, 4.4vw, 18px);
   cursor: pointer;
   border-radius: 50px;
   border: 1px solid var(--clr-border);
   padding: 0.5rem;
   font-weight: 300;
+  transition: var(--transition);
 }
-section .card .card-content .tags {
+.inner .card .card-content .user-personal-details i:hover {
+  background-color: black;
+  color: white;
+}
+.inner .card .card-content .tags {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-section .card .card-content .tags li {
-  font-size: 3.2vw;
+.inner .card .card-content .tags li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: clamp(10px, 3.2vw, 12px);
   border-radius: 50px;
   padding: 0.3rem 0.6rem;
   white-space: nowrap;
   background-color: var(--clr-bg);
 }
-section .card .card-content .tags li:last-child {
+.inner .card .card-content .tags li:last-child {
   background-color: var(--clr-surface);
   border: 1px solid var(--clr-border);
 }
-section .card .card-content .user-stats {
+.inner .card .card-content .user-stats {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: 0.5rem;
 }
-section .card .card-content .user-stats .stat {
+.inner .card .card-content .user-stats .stat {
   padding: 0.2rem 1.4rem;
   border-right: 1.2px solid #e5e5e5;
   display: flex;
@@ -148,67 +176,95 @@ section .card .card-content .user-stats .stat {
   align-items: center;
   gap: 0.3rem;
 }
-section .card .card-content .user-stats .stat .top {
+.inner .card .card-content .user-stats .stat .top {
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
-section .card .card-content .user-stats .stat .top h6 {
-  font-size: 4.5vw;
+.inner .card .card-content .user-stats .stat .top h6 {
+  font-size: clamp(13px, 4.5vw, 16px);
 }
-section .card .card-content .user-stats .stat .top i {
-  font-size: 5vw;
+.inner .card .card-content .user-stats .stat .top i {
+  font-size: clamp(14px, 5vw, 18px);
 }
-section .card .card-content .user-stats .stat p {
-  font-size: 3.3vw;
+.inner .card .card-content .user-stats .stat p {
+  font-size: clamp(10px, 3.3vw, 12px);
   color: var(--clr-text-secondary);
 }
-section .card .card-content button {
+.inner .card .card-content button {
   text-transform: capitalize;
   cursor: pointer;
   border-radius: 50px;
   border: none;
-  font-size: 4.5vw;
+  font-size: clamp(13px, 4.5vw, 17px);
   padding: 0.7rem 0rem;
   background-color: var(--clr-btn-bg);
   color: var(--clr-btn-text);
   font-weight: 600;
+  transition: all ease 0.4s;
 }
-section #card2 header {
+.inner .card .card-content button:hover {
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+.inner #card2 header {
   width: 98%;
   height: 98%;
   margin-inline: auto;
   background: url("header.png") center/cover;
 }
-section #card2 .user-personal-details .name-role h3 {
-  color: white;
+.inner #card2 .user-personal-details .name-role h3 {
+  color: var(--clr-card2-text);
 }
-section #card2 .user-personal-details .name-role h6 {
-  color: #e3e3e3;
+.inner #card2 .user-personal-details .name-role h6 {
+  color: var(--clr-card2-subtext);
 }
-section #card2 .user-personal-details i {
-  border: 1px solid var(--clr-bg);
-  color: white;
+.inner #card2 .user-personal-details i {
+  border: 1px solid var(--clr-card2-border);
+  color: var(--clr-card2-text);
+  transition: var(--transition);
 }
-section #card2 .tags li {
-  background-color: #2b2233;
-  color: white;
+.inner #card2 .user-personal-details i:hover {
+  background-color: var(--clr-card2-btn-bg);
+  color: var(--clr-card2-btn-text);
 }
-section #card2 .tags li:last-child {
+.inner #card2 .tags li {
+  background-color: var(--clr-card2-bg);
+  color: var(--clr-card2-text);
+}
+.inner #card2 .tags li:last-child {
   background-color: transparent;
-  border: 1px solid var(--clr-bg);
+  border: 1px solid var(--clr-card2-border);
 }
-section #card2 .user-stats {
+.inner #card2 .user-stats {
   padding-block: 0.5rem;
 }
-section #card2 .user-stats .stat {
+.inner #card2 .user-stats .stat {
   border-right: none;
-  color: white;
+  color: var(--clr-card2-text);
 }
-section #card2 .user-stats .stat p {
-  color: var(--clr-bg);
+.inner #card2 .user-stats .stat p {
+  color: var(--clr-card2-border);
 }
-section #card2 button {
-  background-color: white;
-  color: black;
+.inner #card2 button {
+  background-color: var(--clr-card2-btn-bg);
+  color: var(--clr-card2-btn-text);
+  border: none;
+  transition: var(--transition2);
+}
+.inner #card2 button:hover {
+  background-color: var(--clr-card2-btn-hover-bg);
+  color: var(--clr-card2-btn-hover-text);
+}
+
+@media (min-width: 768px) {
+  .inner {
+    height: 100%;
+    flex-direction: row;
+    padding: 0rem 1.5rem;
+  }
+  .inner .card {
+    width: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
