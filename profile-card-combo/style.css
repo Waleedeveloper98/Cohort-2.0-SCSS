@@ -176,6 +176,9 @@ section {
   align-items: center;
   gap: 0.3rem;
 }
+.inner .card .card-content .user-stats .stat:last-child {
+  border-right: none;
+}
 .inner .card .card-content .user-stats .stat .top {
   display: flex;
   align-items: center;

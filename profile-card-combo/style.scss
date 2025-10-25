@@ -193,6 +193,9 @@ section {
           flex-direction: column;
           align-items: center;
           gap: 0.3rem;
+          &:last-child{
+            border-right: none;
+          }
 
           .top {
             display: flex;
