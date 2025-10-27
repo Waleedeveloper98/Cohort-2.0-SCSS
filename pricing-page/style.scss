@@ -132,12 +132,6 @@ section {
         &:nth-child(3):hover #main-icon {
           color: var(--color-accent);
         }
-        &:nth-child(2) {
-          transform: scale(1.1);
-        }
-        &:hover {
-          transform: scale(1.05);
-        }
         &:nth-child(1) {
           #main-icon {
             color: #c3ccfe;

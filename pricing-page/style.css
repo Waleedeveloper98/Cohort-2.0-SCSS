@@ -125,12 +125,6 @@ section .inner .cards-container .card:nth-child(1):hover #main-icon {
 section .inner .cards-container .card:nth-child(3):hover #main-icon {
   color: var(--color-accent);
 }
-section .inner .cards-container .card:nth-child(2) {
-  transform: scale(1.1);
-}
-section .inner .cards-container .card:hover {
-  transform: scale(1.05);
-}
 section .inner .cards-container .card:nth-child(1) #main-icon {
   color: #c3ccfe;
 }
