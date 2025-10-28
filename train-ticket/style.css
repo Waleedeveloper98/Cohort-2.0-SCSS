@@ -5,7 +5,210 @@
   font-family: poppins, sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .background {
+  width: 100%;
+  background-color: #fad64b;
+}
+section .background .ticket {
+  width: 100%;
+  padding: 1rem;
+}
+section .background .ticket .ticket-header {
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1rem;
+  border-radius: 0.7rem;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  corner-shape: round round scoop scoop;
+  overflow: hidden;
+}
+section .background .ticket .ticket-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  border-bottom: 2px dashed #b0b0b0;
+}
+section .background .ticket .ticket-header .left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+section .background .ticket .ticket-header .left h1 {
+  text-transform: capitalize;
+  font-size: 4.5vw;
+}
+section .background .ticket .ticket-header .left i {
+  background-color: #fad64b;
+  padding: 0.3rem;
+  border-radius: 50px;
+  border: 1.2px solid;
+}
+section .background .ticket .ticket-header .fair {
+  font-size: 4.5vw;
+}
+section .background .ticket .ticket-main {
+  border-radius: 0.7rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  overflow: hidden;
+  background-color: white;
+  corner-shape: scoop scoop round round;
+}
+section .background .ticket .ticket-main #line1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0rem;
+  text-align: center;
+}
+section .background .ticket .ticket-main #line1 .left h4,
+section .background .ticket .ticket-main #line1 .right h4 {
+  font-size: 5.5vw;
+  font-weight: 600;
+}
+section .background .ticket .ticket-main #line1 .left h5,
+section .background .ticket .ticket-main #line1 .right h5 {
+  font-size: 3.5vw;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+section .background .ticket .ticket-main #line1 .center {
+  background-color: #fad64b;
+  border: 1.2px solid;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+}
+section .background .ticket .ticket-main #line2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0rem;
+}
+section .background .ticket .ticket-main #line2 .left {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+section .background .ticket .ticket-main #line2 .left img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50px;
+  border: 1.2px solid;
+}
+section .background .ticket .ticket-main #line2 .left .user-details h3 {
+  font-weight: 600;
+  font-size: 4.2vw;
+}
+section .background .ticket .ticket-main #line2 .left .user-details h5 {
+  font-weight: 500;
+  color: #b0b0b0;
+  font-size: 3vw;
+}
+section .background .ticket .ticket-main #line2 .right {
+  text-align: right;
+}
+section .background .ticket .ticket-main #line2 .right h4 {
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: 4vw;
+}
+section .background .ticket .ticket-main #line2 .right h5 {
+  font-size: 5vw;
+  font-weight: 700;
+}
+section .background .ticket .ticket-main #line3,
+section .background .ticket .ticket-main #line4,
+section .background .ticket .ticket-main #line5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0rem;
+}
+section .background .ticket .ticket-main #line3 .left,
+section .background .ticket .ticket-main #line3 .right,
+section .background .ticket .ticket-main #line4 .left,
+section .background .ticket .ticket-main #line4 .right,
+section .background .ticket .ticket-main #line5 .left,
+section .background .ticket .ticket-main #line5 .right {
+  text-align: right;
+}
+section .background .ticket .ticket-main #line3 .left h4,
+section .background .ticket .ticket-main #line3 .right h4,
+section .background .ticket .ticket-main #line4 .left h4,
+section .background .ticket .ticket-main #line4 .right h4,
+section .background .ticket .ticket-main #line5 .left h4,
+section .background .ticket .ticket-main #line5 .right h4 {
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: 4vw;
+}
+section .background .ticket .ticket-main #line3 .left h5,
+section .background .ticket .ticket-main #line3 .right h5,
+section .background .ticket .ticket-main #line4 .left h5,
+section .background .ticket .ticket-main #line4 .right h5,
+section .background .ticket .ticket-main #line5 .left h5,
+section .background .ticket .ticket-main #line5 .right h5 {
+  font-size: 4.8vw;
+  font-weight: 700;
+}
+section .background .ticket .ticket-main #line3 .left,
+section .background .ticket .ticket-main #line4 .left,
+section .background .ticket .ticket-main #line5 .left {
+  text-align: left;
+}
+section .background .ticket .ticket-main .line {
+  padding-inline: 1rem !important;
+}
+section .background .ticket .ticket-main .barcode {
+  width: 100%;
+  padding: 1rem 0rem;
+  background-color: #f0f1e5;
+  border-bottom: 1.4px solid #bdbdbd;
+}
+section .background .ticket .ticket-main .barcode img {
+  width: 90%;
+  height: 13vw;
+  display: block;
+  margin: auto;
+}
+section .background .ticket .ticket-main .download {
+  width: 100%;
+}
+section .background .ticket .ticket-main .download button {
+  width: 100%;
+  padding: 1rem 0rem;
+  font-size: 4.8vw;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }/*# sourceMappingURL=style.css.map */
