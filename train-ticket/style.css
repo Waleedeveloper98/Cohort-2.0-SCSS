@@ -26,10 +26,12 @@ section {
 }
 section .background {
   width: 100%;
+  max-width: 400px;
   background-color: #fad64b;
 }
 section .background .ticket {
   width: 100%;
+  max-width: 400px;
   padding: 1rem;
 }
 section .background .ticket .ticket-header {
@@ -61,7 +63,7 @@ section .background .ticket .ticket-header .left {
 }
 section .background .ticket .ticket-header .left h1 {
   text-transform: capitalize;
-  font-size: 4.5vw;
+  font-size: clamp(12px, 4.5vw, 16px);
 }
 section .background .ticket .ticket-header .left i {
   background-color: #fad64b;
@@ -70,7 +72,7 @@ section .background .ticket .ticket-header .left i {
   border: 1.2px solid;
 }
 section .background .ticket .ticket-header .fair {
-  font-size: 4.5vw;
+  font-size: clamp(12px, 4.5vw, 16px);
 }
 section .background .ticket .ticket-main {
   border-radius: 0.7rem;
@@ -89,12 +91,12 @@ section .background .ticket .ticket-main #line1 {
 }
 section .background .ticket .ticket-main #line1 .left h4,
 section .background .ticket .ticket-main #line1 .right h4 {
-  font-size: 5.5vw;
+  font-size: clamp(16px, 5.5vw, 20px);
   font-weight: 600;
 }
 section .background .ticket .ticket-main #line1 .left h5,
 section .background .ticket .ticket-main #line1 .right h5 {
-  font-size: 3.5vw;
+  font-size: 10px;
   font-weight: 500;
   color: #b0b0b0;
 }
@@ -126,12 +128,12 @@ section .background .ticket .ticket-main #line2 .left img {
 }
 section .background .ticket .ticket-main #line2 .left .user-details h3 {
   font-weight: 600;
-  font-size: 4.2vw;
+  font-size: clamp(13px, 4.2vw, 16.5px);
 }
 section .background .ticket .ticket-main #line2 .left .user-details h5 {
   font-weight: 500;
   color: #b0b0b0;
-  font-size: 3vw;
+  font-size: clamp(10px, 3vw, 12px);
 }
 section .background .ticket .ticket-main #line2 .right {
   text-align: right;
@@ -139,10 +141,10 @@ section .background .ticket .ticket-main #line2 .right {
 section .background .ticket .ticket-main #line2 .right h4 {
   color: #b0b0b0;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: clamp(13px, 4vw, 16px);
 }
 section .background .ticket .ticket-main #line2 .right h5 {
-  font-size: 5vw;
+  font-size: clamp(13.5px, 5vw, 16.5px);
   font-weight: 700;
 }
 section .background .ticket .ticket-main #line3,
@@ -169,7 +171,7 @@ section .background .ticket .ticket-main #line5 .left h4,
 section .background .ticket .ticket-main #line5 .right h4 {
   color: #b0b0b0;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: clamp(12px, 4vw, 13.5px);
 }
 section .background .ticket .ticket-main #line3 .left h5,
 section .background .ticket .ticket-main #line3 .right h5,
@@ -177,7 +179,7 @@ section .background .ticket .ticket-main #line4 .left h5,
 section .background .ticket .ticket-main #line4 .right h5,
 section .background .ticket .ticket-main #line5 .left h5,
 section .background .ticket .ticket-main #line5 .right h5 {
-  font-size: 4.8vw;
+  font-size: clamp(13px, 4.8vw, 17px);
   font-weight: 700;
 }
 section .background .ticket .ticket-main #line3 .left,
@@ -196,7 +198,7 @@ section .background .ticket .ticket-main .barcode {
 }
 section .background .ticket .ticket-main .barcode img {
   width: 90%;
-  height: 13vw;
+  height: clamp(40px, 13vw, 50px);
   display: block;
   margin: auto;
 }
@@ -206,7 +208,7 @@ section .background .ticket .ticket-main .download {
 section .background .ticket .ticket-main .download button {
   width: 100%;
   padding: 1rem 0rem;
-  font-size: 4.8vw;
+  font-size: clamp(13px, 4.8vw, 17px);
   font-weight: 600;
   border: none;
   cursor: pointer;
