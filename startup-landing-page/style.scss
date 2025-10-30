@@ -103,6 +103,22 @@ section {
         }
       }
     }
+    .logo-marquee {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.3rem;
+      flex-wrap: wrap;
+      h6 {
+        font-size: clamp(14px, 5vw, 28px);
+        font-weight: 600;
+        sub {
+          font-weight: 300;
+          font-size: clamp(8px, 2.5vw, 10.5px);
+        }
+      }
+    }
   }
 }
 
@@ -118,6 +134,10 @@ section {
             list-style: none;
             a {
               font-size: clamp(12px, 1.15vw, 16px);
+              transition: all ease 0.25s;
+              &:hover {
+                color: #676767;
+              }
             }
           }
         }
@@ -128,13 +148,22 @@ section {
             padding: 0.8rem 1.5rem;
             border-radius: 50px;
             border: none;
+            transition: all ease 0.25s;
             cursor: pointer;
             &:nth-child(1) {
               background-color: transparent;
+              &:hover {
+                background-color: #f3f3f3;
+              }
             }
             &:nth-child(2) {
+              border: 1px solid black;
               background-color: black;
               color: white;
+              &:hover {
+                background-color: transparent;
+                color: black;
+              }
             }
           }
         }
@@ -156,12 +185,27 @@ section {
             margin-top: 1rem;
             button {
               padding: 0.8rem 2.1rem;
+              transition: all ease 0.25s;
+              &:nth-child(1) {
+                &:hover {
+                  background-color: #f3f3f3;
+                  color: black;
+                }
+              }
               &:nth-child(2) {
                 padding: 0.8rem 1.5rem;
+                &:hover {
+                  background-color: black;
+                  color: white;
+                }
               }
             }
           }
         }
+      }
+      .logo-marquee {
+        margin-top: 1.5rem;
+        justify-content: space-around;
       }
     }
   }
