@@ -43,6 +43,13 @@ section {
       .logo {
         font-size: clamp(14px, 5vw, 24px);
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        i {
+          display: inline-block;
+          transform: rotate(-30deg);
+        }
       }
       .menu-items {
         display: none;
