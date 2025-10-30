@@ -1,13 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins, sans-serif;
-}
-
-:root {
-  --open-sans: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html,
@@ -61,7 +57,6 @@ section .inner .hero-content {
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  font-family: var(--open-sans);
 }
 section .inner .hero-content header {
   text-align: center;
@@ -193,7 +188,7 @@ section .inner .logo-marquee h6 sub {
   section .inner .hero-content header .hero-btns {
     flex-direction: row;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   section .inner .hero-content header .hero-btns button {
     padding: 0.8rem 2.1rem;
