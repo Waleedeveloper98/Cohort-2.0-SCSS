@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+:root {
+  --open-sans: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .inner {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  padding: 1rem;
+}
+section .inner nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .inner nav .logo {
+  font-size: clamp(14px, 5vw, 24px);
+  font-weight: 500;
+}
+section .inner nav .menu-items {
+  display: none;
+}
+section .inner nav .btns {
+  display: none;
+}
+section .inner nav .menu i {
+  font-size: clamp(20px, 6vw, 28px);
+}
+section .inner .hero-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: var(--open-sans);
+}
+section .inner .hero-content header {
+  text-align: center;
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+section .inner .hero-content header h1 {
+  font-size: clamp(28px, 8.5vw, 70px);
+  line-height: 1.2;
+  font-weight: 600;
+}
+section .inner .hero-content header p {
+  font-size: clamp(12px, 4vw, 16px);
+  font-weight: 400;
+}
+section .inner .hero-content header .hero-btns {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+section .inner .hero-content header .hero-btns button {
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: clamp(10px, 3.2vw, 15px);
+  background-color: black;
+  color: white;
+}
+section .inner .hero-content header .hero-btns button:nth-child(2) {
+  padding: 0.5rem 1rem;
+  color: black;
+  border: 1px solid;
+  background-color: transparent;
+}
+section .inner .hero-content .hero-img {
+  width: clamp(300px, 87vw, 1100px);
+}
+section .inner .hero-content .hero-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  section .inner {
+    padding: 1rem 3rem;
+  }
+  section .inner nav .menu-items {
+    display: flex;
+    gap: 2rem;
+  }
+  section .inner nav .menu-items li {
+    list-style: none;
+  }
+  section .inner nav .menu-items li a {
+    font-size: clamp(12px, 1.15vw, 16px);
+  }
+  section .inner nav .btns {
+    display: flex;
+    gap: 0.5rem;
+  }
+  section .inner nav .btns button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  section .inner nav .btns button:nth-child(1) {
+    background-color: transparent;
+  }
+  section .inner nav .btns button:nth-child(2) {
+    background-color: black;
+    color: white;
+  }
+  section .inner nav .menu {
+    display: none;
+  }
+  section .inner .hero-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  section .inner .hero-content header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  section .inner .hero-content header h1 {
+    width: 60%;
+    line-height: 1.1;
+  }
+  section .inner .hero-content header .hero-btns {
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  section .inner .hero-content header .hero-btns button {
+    padding: 0.8rem 2.1rem;
+  }
+  section .inner .hero-content header .hero-btns button:nth-child(2) {
+    padding: 0.8rem 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
