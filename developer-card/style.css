@@ -18,10 +18,13 @@ body {
 
 section {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  padding-block: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
   padding-inline: 1rem;
   background-color: rgb(240, 240, 240);
 }
@@ -87,7 +90,7 @@ section {
 .card .card-content .location {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 .card .card-content .location p {
   font-size: clamp(10px, 3.1vw, 12px);
@@ -138,6 +141,11 @@ section {
   border-radius: 0.5rem;
   font-family: var(--roboto);
   cursor: pointer;
+  transition: all ease 0.24s;
+}
+.card .card-content .socials-container button:hover {
+  transform: scale(1.04);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .card .card-content .socials-container .socials {
   display: flex;
@@ -148,4 +156,35 @@ section {
   background-color: #f4f8fb;
   padding: 0.3rem;
   border-radius: 50px;
+}
+
+.card2 .top-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.card2 .top-details .available {
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: 1px solid green;
+  background-color: rgba(1, 196, 1, 0.1);
+  border-radius: 50px;
+  padding: 0.2rem 0.5rem;
+}
+.card2 .top-details .available .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: green;
+}
+.card2 .top-details .available p {
+  font-size: clamp(5px, 1.7vw, 8px);
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style.css.map */
