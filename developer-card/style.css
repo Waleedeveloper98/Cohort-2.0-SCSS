@@ -23,7 +23,7 @@ section {
   align-items: center;
   justify-content: center;
   padding-inline: 1rem;
-  background-color: #e7e7e7;
+  background-color: rgb(240, 240, 240);
 }
 
 .card {
@@ -31,6 +31,7 @@ section {
   max-width: 370px;
   position: relative;
   background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   font-family: var(--poppins);
   border-radius: 0.7rem;
   padding: 0.2rem;
@@ -124,7 +125,7 @@ section {
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 .card .card-content .socials-container button {
   background-color: black;
