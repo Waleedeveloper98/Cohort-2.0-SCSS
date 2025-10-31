@@ -152,7 +152,11 @@ section {
   display: flex;
   gap: 0.5rem;
 }
-.card .card-content .socials-container .socials i {
+.card .card-content .socials-container .socials a {
+  text-decoration: none;
+  color: black;
+}
+.card .card-content .socials-container .socials a i {
   cursor: pointer;
   background-color: #f4f8fb;
   padding: 0.3rem;
@@ -169,7 +173,6 @@ section {
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  border: 1px solid green;
   background-color: rgba(1, 196, 1, 0.1);
   border-radius: 50px;
   padding: 0.2rem 0.5rem;
@@ -178,10 +181,10 @@ section {
   width: 4px;
   height: 4px;
   border-radius: 50px;
-  background-color: green;
+  background-color: rgb(1, 192, 1);
 }
 .card2 .top-details .available p {
-  font-size: clamp(5px, 1.7vw, 8px);
+  font-size: clamp(5px, 1.9vw, 9px);
 }
 
 @media (min-width: 768px) {
