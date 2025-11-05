@@ -30,7 +30,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //   font-family: poppins, sans-serif;
 }
 html,
 body {
@@ -56,6 +55,11 @@ body {
   align-items: center;
   gap: $gap;
 }
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 main {
   background-color: var(--color-background);
@@ -64,17 +68,21 @@ main {
   color: var(--color-white);
   font-family: manrope1;
 }
-
+button {
+  cursor: pointer;
+}
+section {
+  @include flex();
+}
+.inner {
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 1.5rem;
+}
 .page1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-top: 4rem;
   padding-bottom: 4rem;
   .inner {
-    width: 100%;
-    max-width: 1280px;
-    padding-inline: 1.2rem;
     @include flex-col(1.5rem);
     .top {
       width: 100%;
@@ -146,7 +154,7 @@ main {
         @include flex-col(0.7rem);
         button {
           padding: 0.8rem 0rem;
-          font-size: clamp(12px, 4.5vw, 15px);
+          font-size: clamp(12px, 4.7vw, 18px);
           border-radius: 0.6rem;
           color: white;
           text-transform: capitalize;
@@ -160,6 +168,14 @@ main {
           }
         }
       }
+    }
+  }
+}
+.page2 {
+  .inner {
+    @include flex();
+    img {
+      width: clamp(300px, 100%, 900px);
     }
   }
 }
