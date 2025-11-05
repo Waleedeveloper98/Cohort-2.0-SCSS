@@ -1,0 +1,53 @@
+@font-face {
+  font-family: manrope1;
+  src: url(fonts/Manrope-Regular.ttf);
+}
+@font-face {
+  font-family: manrope2;
+  src: url(fonts/Manrope-Light.ttf);
+}
+@font-face {
+  font-family: manrope3;
+  src: url(fonts/Manrope-Medium.ttf);
+}
+@font-face {
+  font-family: manrope4;
+  src: url(fonts/Manrope-Bold.ttf);
+}
+@font-face {
+  font-family: neu1;
+  src: url(fonts/NeueMachina-Regular_DQCmjH1st\ \(1\).ttf);
+}
+@font-face {
+  font-family: neu2;
+  src: url(fonts/NeueMachina-Light.otf);
+}
+@font-face {
+  font-family: neu3;
+  src: url(fonts/NeueMachina-Medium_d0jNuroW9.ttf);
+}
+@font-face {
+  font-family: neu4;
+  src: url(fonts/NeueMachina-Bold_WaMOsLX9Z9.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --color-orange-extra-light: #ffedd4;
+  --color-orange-light: #e8602e;
+  --color-orange-dark: #be5027;
+  --color-black: #050000;
+  --color-white: #e9e9e9;
+  --color-gray: #736d6b;
+}/*# sourceMappingURL=style.css.map */
