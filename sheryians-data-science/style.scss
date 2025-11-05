@@ -101,6 +101,15 @@ body {
     color: var(--color-orange-light);
   }
 }
+@mixin btn-style {
+  padding: 0.8rem 0rem;
+  font-size: clamp(12px, 4.7vw, 18px);
+  border-radius: 0.6rem;
+  color: white;
+  background-color: var(--color-orange-light);
+  text-transform: capitalize;
+  border: none;
+}
 
 main {
   background-color: var(--color-background);
@@ -341,6 +350,135 @@ section {
     }
   }
 }
+.page6 {
+  width: 100%;
+  background-color: white;
+  padding-block: 4rem;
+  border-radius: 1.5rem;
+  color: var(--color-black);
+  position: relative;
+  .inner {
+    position: relative;
+    @include flex-col(3rem);
+    .top {
+      @include flex-col(1.5rem);
+      align-items: center;
+      text-align: center;
+      h5 {
+        @include highlight-text();
+        background-color: white;
+        color: var(--color-black);
+        .dot {
+          background-color: black;
+        }
+      }
+      h2 {
+        @include page-heading();
+        color: var(--color-black);
+      }
+    }
+    .bottom {
+      @include flex-col(2rem);
+      .modules {
+        @include flex-col(1.5rem);
+        .module {
+          cursor: pointer;
+          background-color: white;
+          border: 1.5px solid #00000022;
+          padding: 1rem;
+          border-radius: 0.8rem;
+          @include flex-col(0.7rem);
+          align-items: flex-start;
+          transition: all ease 0.25s;
+          &:hover {
+            background-color: #fffaf3;
+          }
+          h5 {
+            text-transform: uppercase;
+            color: var(--color-orange-light);
+            font-size: clamp(12px, 3.2vw, 14px);
+            font-family: manrope2;
+            background-color: var(--color-orange-extra-light);
+            padding: 0.3rem 0.9rem;
+            border-radius: 0.5rem;
+          }
+          h3 {
+            text-transform: capitalize;
+            font-size: clamp(16px, 5.5vw, 22px);
+            font-weight: 600;
+          }
+          p {
+            color: #00000086;
+            font-family: manrope3;
+            font-size: clamp(14.5px, 4.2vw, 16px);
+          }
+          .topic {
+            @include flex-center(0.5rem);
+            color: #00000086;
+            h6 {
+              font-size: clamp(12px, 3.2vw, 16px);
+            }
+            i {
+              color: var(--color-black);
+            }
+          }
+        }
+      }
+      .prerequisits {
+        background-color: var(--color-black);
+        color: white;
+        padding: 1rem;
+        border-radius: 0.8rem;
+        @include flex-col(1rem);
+        h2 {
+          font-size: clamp(24px, 7.5vw, 30px);
+        }
+        p {
+          color: rgba(255, 255, 255, 0.614);
+          font-size: clamp(10px, 3.8vw, 14.4px);
+        }
+        .level {
+          display: flex;
+          gap: 1.2rem;
+          div {
+            @include flex-center(0.5rem);
+            h6 {
+              font-size: clamp(11px, 3.1vw, 13px);
+            }
+          }
+        }
+        .overview {
+          @include flex-col(1rem);
+          h5 {
+            font-size: clamp(9px, 3.5vw, 14px);
+            text-transform: uppercase;
+          }
+          ul {
+            @include flex-col(0.6rem);
+            li {
+              list-style: none;
+              @include flex-center(0.5rem);
+              i {
+                background-color: white;
+                color: black;
+                border-radius: 50px;
+              }
+              p {
+                font-size: clamp(10px, 3.6vw, 14px);
+                color: white;
+              }
+            }
+          }
+        }
+        button {
+          @include btn-style();
+          background-color: var(--color-orange-dark);
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -385,6 +523,26 @@ section {
         }
         img {
           transition: all ease 0.2s;
+        }
+      }
+    }
+  }
+  .page6 {
+    .inner {
+      .bottom {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+        .modules {
+          width: 65%;
+        }
+        .prerequisits {
+          position: sticky;
+          top: 10%;
+          width: 30%;
+          padding-block: 2rem;
+          padding-inline: 1.3rem;
         }
       }
     }
