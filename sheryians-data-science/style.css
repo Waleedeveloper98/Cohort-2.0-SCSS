@@ -183,6 +183,37 @@ section {
   width: clamp(300px, 100%, 900px);
 }
 
+.page3 {
+  padding-block: 4rem;
+}
+.page3 .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.page3 .inner .course-guide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+.page3 .inner .course-guide h6 {
+  text-transform: uppercase;
+  color: var(--color-gray);
+  letter-spacing: 1.5px;
+  font-family: manrope4;
+  font-size: clamp(8px, 3vw, 11.5px);
+}
+.page3 .inner .course-guide h5 {
+  text-transform: capitalize;
+  font-size: clamp(14px, 4.5vw, 20px);
+  font-family: manrope3;
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     padding-inline: 5rem;
@@ -193,6 +224,12 @@ section {
   .page1 .inner .bottom .btns button {
     padding-block: 0.9rem;
     padding-inline: 4rem;
+  }
+  .page3 .inner {
+    gap: 4rem;
+  }
+  .page3 .inner .course-guide {
+    width: 20%;
   }
 }
 @media (min-width: 1024px) {

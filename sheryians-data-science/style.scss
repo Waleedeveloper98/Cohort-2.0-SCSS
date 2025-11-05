@@ -179,6 +179,32 @@ section {
     }
   }
 }
+.page3 {
+  padding-block: 4rem;
+  .inner {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 3rem;
+    .course-guide {
+      @include flex();
+      flex-direction: column;
+      gap: .4rem;
+      text-align: center;
+      h6 {
+        text-transform: uppercase;
+        color: var(--color-gray);
+        letter-spacing: 1.5px;
+        font-family: manrope4;
+        font-size: clamp(8px, 3vw, 11.5px);
+      }
+      h5 {
+        text-transform: capitalize;
+        font-size: clamp(14px, 4.5vw, 20px);
+        font-family: manrope3;
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -192,6 +218,14 @@ section {
             padding-inline: 4rem;
           }
         }
+      }
+    }
+  }
+  .page3 {
+    .inner {
+        gap: 4rem;
+      .course-guide{
+        width: 20%;
       }
     }
   }
