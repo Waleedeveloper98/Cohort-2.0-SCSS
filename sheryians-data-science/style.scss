@@ -92,6 +92,15 @@ body {
     }
   }
 }
+@mixin page-heading {
+  font-family: manrope3;
+  line-height: 1.4;
+  font-size: clamp(24px, 6.5vw, 48px);
+  letter-spacing: 1px;
+  span {
+    color: var(--color-orange-light);
+  }
+}
 
 main {
   background-color: var(--color-background);
@@ -249,13 +258,7 @@ section {
         @include highlight-text();
       }
       h2 {
-        font-family: manrope3;
-        line-height: 1.4;
-        font-size: clamp(24px, 6.5vw,48px);
-        letter-spacing: 1px;
-        span {
-          color: var(--color-orange-light);
-        }
+        @include page-heading();
       }
     }
     .bottom {
@@ -303,6 +306,41 @@ section {
     }
   }
 }
+.page5 {
+  padding-bottom: 4rem;
+  .inner {
+    @include flex-col(3rem);
+    .top {
+      text-align: center;
+      @include flex-col(1.5rem);
+      align-items: center;
+      h5 {
+        @include highlight-text();
+      }
+      h2 {
+        @include page-heading();
+      }
+    }
+    .bottom {
+      @include flex();
+      flex-wrap: wrap;
+      gap: 2rem;
+      position: relative;
+      img {
+        position: relative;
+        width: clamp(65px, 20vw, 90px);
+        height: clamp(65px, 20vw, 90px);
+        object-fit: cover;
+        @include flex();
+        background-color: rgba(255, 255, 255, 0.071);
+        padding: 1.3rem;
+        cursor: pointer;
+        border-radius: 1000px;
+        border: 1.5px solid rgba(255, 255, 255, 0.103);
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -327,29 +365,47 @@ section {
       }
     }
   }
-  .page4{
-    h2{
-        width: 50%;
-        line-height: 1.2;
+  .page4,
+  .page5 {
+    h2 {
+      width: 50%;
+      line-height: 1.2;
     }
   }
-}
-@media (min-width: 1024px) {
-  .page1 {
+  .page5 {
     .inner {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      .top {
-        width: clamp(400px, 40%, 450px);
-        height: 100%;
-        .video-container {
-          height: clamp(280px, 50vh, 320px);
+      .bottom {
+        padding-inline: 3rem;
+        gap: 6rem;
+        transition: all ease 0.2s;
+        &:hover {
+          img:not(:hover) {
+            filter: blur(10px);
+          }
+        }
+        img {
+          transition: all ease 0.2s;
         }
       }
-      .bottom {
-        width: 50%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .page1 {
+      .inner {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .top {
+          width: clamp(400px, 40%, 450px);
+          height: 100%;
+          .video-container {
+            height: clamp(280px, 50vh, 320px);
+          }
+        }
+        .bottom {
+          width: 50%;
+        }
       }
     }
   }

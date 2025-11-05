@@ -316,6 +316,86 @@ section {
   border: none;
 }
 
+.page5 {
+  padding-bottom: 4rem;
+}
+.page5 .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.page5 .inner .top {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.page5 .inner .top h5 {
+  text-transform: uppercase;
+  font-size: clamp(18px, 6vw, 24px);
+  font-family: neu1;
+  color: rgba(255, 255, 255, 0.6901960784);
+  background-color: #1e0c06;
+  border: 0.5px solid var(--color-orange-dark);
+  padding: 0.5rem 1.5rem;
+  position: relative;
+}
+.page5 .inner .top h5 .dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-white);
+}
+.page5 .inner .top h5 .dot:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.page5 .inner .top h5 .dot:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.page5 .inner .top h5 .dot:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+.page5 .inner .top h5 .dot:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+.page5 .inner .top h2 {
+  font-family: manrope3;
+  line-height: 1.4;
+  font-size: clamp(24px, 6.5vw, 48px);
+  letter-spacing: 1px;
+}
+.page5 .inner .top h2 span {
+  color: var(--color-orange-light);
+}
+.page5 .inner .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+}
+.page5 .inner .bottom img {
+  position: relative;
+  width: clamp(65px, 20vw, 90px);
+  height: clamp(65px, 20vw, 90px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.071);
+  padding: 1.3rem;
+  cursor: pointer;
+  border-radius: 1000px;
+  border: 1.5px solid rgba(255, 255, 255, 0.103);
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     padding-inline: 5rem;
@@ -333,12 +413,24 @@ section {
   .page3 .inner .course-guide {
     width: 20%;
   }
-  .page4 h2 {
+  .page4 h2,
+  .page5 h2 {
     width: 50%;
     line-height: 1.2;
   }
+  .page5 .inner .bottom {
+    padding-inline: 3rem;
+    gap: 6rem;
+    transition: all ease 0.2s;
+  }
+  .page5 .inner .bottom:hover img:not(:hover) {
+    filter: blur(10px);
+  }
+  .page5 .inner .bottom img {
+    transition: all ease 0.2s;
+  }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) and (min-width: 1024px) {
   .page1 .inner {
     padding-top: 5rem;
     padding-bottom: 5rem;
