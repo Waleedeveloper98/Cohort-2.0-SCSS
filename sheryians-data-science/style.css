@@ -727,6 +727,135 @@ section {
   border-radius: inherit;
 }
 
+.page8 {
+  padding-block: 4rem;
+  overflow: hidden;
+  width: 100%;
+}
+.page8 .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.page8 .inner .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.page8 .inner .top h5 {
+  text-transform: uppercase;
+  font-size: clamp(18px, 6vw, 24px);
+  font-family: neu1;
+  color: rgba(255, 255, 255, 0.6901960784);
+  background-color: #1e0c06;
+  border: 0.5px solid var(--color-orange-dark);
+  padding: 0.5rem 1.5rem;
+  position: relative;
+}
+.page8 .inner .top h5 .dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-white);
+}
+.page8 .inner .top h5 .dot:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.page8 .inner .top h5 .dot:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.page8 .inner .top h5 .dot:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+.page8 .inner .top h5 .dot:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+.page8 .inner .top h2 {
+  font-family: manrope3;
+  line-height: 1.4;
+  font-size: clamp(24px, 6.5vw, 48px);
+  letter-spacing: 1px;
+}
+.page8 .inner .top h2 span {
+  color: var(--color-orange-light);
+}
+.page8 .inner .user-reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+.page8 .inner .user-reviews-container .review-line {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  margin-left: 1rem;
+  transform: translateX(-10%);
+}
+.page8 .inner .user-reviews-container .review-line:nth-child(2) {
+  transform: translateX(-80%);
+}
+.page8 .inner .user-reviews-container .review-line .review {
+  position: relative;
+  flex-shrink: 0;
+  width: clamp(300px, 85vw, 600px);
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.337254902) 1%, black 80%);
+  padding: 0.1rem;
+  border-radius: 1rem;
+}
+.page8 .inner .user-reviews-container .review-line .review .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-background);
+}
+.page8 .inner .user-reviews-container .review-line .review .content .user-comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.page8 .inner .user-reviews-container .review-line .review .content .user-comment svg {
+  width: clamp(80px, 9vw, 100px);
+}
+.page8 .inner .user-reviews-container .review-line .review .content .user-comment p {
+  font-size: clamp(13px, 4.2vw, 18px);
+}
+.page8 .inner .user-reviews-container .review-line .review .content .who-is-user {
+  display: flex;
+  gap: 0.6rem;
+}
+.page8 .inner .user-reviews-container .review-line .review .content .who-is-user .user-dp {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.page8 .inner .user-reviews-container .review-line .review .content .who-is-user .user-dp img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.page8 .inner .user-reviews-container .review-line .review .content .who-is-user .username-role h4 {
+  font-size: clamp(9px, 4vw, 13px);
+}
+.page8 .inner .user-reviews-container .review-line .review .content .who-is-user .username-role h6 {
+  font-size: clamp(8px, 3.3vw, 12px);
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     padding-inline: 5rem;
@@ -784,6 +913,7 @@ section {
   }
   .page7 .inner {
     margin-top: 4rem;
+    gap: 6rem;
   }
   .page7 .inner .top h2 {
     width: 50%;
@@ -811,6 +941,16 @@ section {
   }
   .page7 .inner .bottom .image-box img {
     max-height: 240px;
+  }
+  .page8 {
+    padding-bottom: 10rem;
+  }
+  .page8 .inner .top h2 {
+    width: 50%;
+  }
+  .page8 .inner .user-reviews-container .review-line .review .content {
+    padding: 2rem;
+    gap: 1.5rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
