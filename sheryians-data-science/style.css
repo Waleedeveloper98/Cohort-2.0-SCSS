@@ -60,6 +60,10 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style: none;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -1069,6 +1073,140 @@ section {
   background: linear-gradient(to bottom left, red, orange);
 }
 
+.page11 {
+  padding-block: 4rem;
+  padding-inline: 0.5rem;
+}
+.page11 .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.page11 .inner .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.page11 .inner .top h5 {
+  text-transform: uppercase;
+  font-size: clamp(18px, 6vw, 24px);
+  font-family: neu1;
+  color: rgba(255, 255, 255, 0.6901960784);
+  background-color: #1e0c06;
+  border: 0.5px solid var(--color-orange-dark);
+  padding: 0.5rem 1.5rem;
+  position: relative;
+}
+.page11 .inner .top h5 .dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-white);
+}
+.page11 .inner .top h5 .dot:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.page11 .inner .top h5 .dot:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.page11 .inner .top h5 .dot:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+.page11 .inner .top h5 .dot:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+.page11 .inner .top h2 {
+  font-family: manrope3;
+  line-height: 1.4;
+  font-size: clamp(24px, 6.5vw, 48px);
+  letter-spacing: 1px;
+}
+.page11 .inner .top h2 span {
+  color: var(--color-orange-light);
+}
+.page11 .inner .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.page11 .inner .bottom .side {
+  background: linear-gradient(120deg, rgba(137, 137, 137, 0.719) 20%, black 50%, rgba(137, 137, 137, 0.701));
+  border-radius: 1rem;
+  padding: 1px;
+}
+.page11 .inner .bottom .side .comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.5rem;
+  background-color: var(--color-black);
+  border-radius: inherit;
+}
+.page11 .inner .bottom .side .comparison .others {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page11 .inner .bottom .side .comparison .others i {
+  font-size: clamp(16px, 6vw, 32px);
+}
+.page11 .inner .bottom .side .comparison .others h3 {
+  font-size: clamp(14px, 5vw, 24px);
+}
+.page11 .inner .bottom .side .comparison svg {
+  height: 30px;
+}
+.page11 .inner .bottom .side .comparison .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.page11 .inner .bottom .side .comparison .list li {
+  padding-block: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.page11 .inner .bottom .side .comparison .list li:nth-child(1)::after, .page11 .inner .bottom .side .comparison .list li:nth-child(2)::after, .page11 .inner .bottom .side .comparison .list li:nth-child(3)::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent 20%, rgba(255, 255, 255, 0.5), transparent 80%);
+  position: absolute;
+  bottom: 0;
+}
+.page11 .inner .bottom .side .comparison .list li .green-tick {
+  color: #69e82e;
+  border: 1px solid #69e82e;
+  border-radius: 50px;
+  font-size: clamp(14px, 3.7vw, 18px);
+  padding: 0.2rem;
+}
+.page11 .inner .bottom .side .comparison .list li .close {
+  color: red;
+  border: 1px solid red;
+  border-radius: 50px;
+  font-size: clamp(14px, 3.7vw, 18px);
+  padding: 0.2rem;
+}
+.page11 .inner .bottom .side .comparison .list li h5 {
+  font-size: clamp(14px, 5vw, 18px);
+  padding-right: 0.9rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.833);
+}
+
 @media (min-width: 768px) {
   .page1 .inner {
     padding-inline: 5rem;
@@ -1206,6 +1344,26 @@ section {
   }
   .page10 .inner .top h2 {
     width: 50%;
+  }
+  .page11 .inner {
+    gap: 6rem;
+  }
+  .page11 .inner .top h2 {
+    width: 50%;
+  }
+  .page11 .inner .bottom {
+    flex-direction: row;
+    gap: 4rem;
+    padding-inline: 5rem;
+  }
+  .page11 .inner .bottom .side {
+    width: 50%;
+  }
+  .page11 .inner .bottom .side .comparison svg {
+    height: 40px;
+  }
+  .page11 .inner .bottom .side .comparison .list li h5 {
+    padding-right: 2.5rem;
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
