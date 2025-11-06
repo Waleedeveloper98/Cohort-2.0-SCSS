@@ -669,6 +669,130 @@ section {
     }
   }
 }
+.page9 {
+  padding-inline: 2.2rem;
+  padding-block: 4rem;
+  .inner {
+    background: linear-gradient(178deg, #e8602e 13%, #0f0f11 35%);
+    padding-block: 2.5rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    @include flex-col(2rem);
+    .top {
+      @include flex-col(1rem);
+      img {
+        width: clamp(50px, 17vw, 100px);
+      }
+      .top-content {
+        @include flex-col(1rem);
+        h2 {
+          font-family: neu1;
+          font-weight: 500;
+          font-size: clamp(26px, 10vw, 35px);
+          padding-right: 1rem;
+          line-height: 1.1;
+          color: var(--color-orange-extra-light);
+        }
+        p {
+          font-size: clamp(16px, 5.8vw, 20px);
+          line-height: 1.2;
+          color: #b69b8c;
+        }
+        .price-with-discount {
+          @include flex-center(0.5rem);
+          h4 {
+            font-size: clamp(25px, 12vw, 30px);
+          }
+          h5 {
+            opacity: 0.5;
+            text-decoration: line-through;
+            font-weight: 500;
+            font-size: clamp(10px, 3.2vw, 14px);
+          }
+        }
+        button {
+          @include btn-style();
+          border: none;
+          font-size: clamp(14px, 5vw, 19px);
+        }
+      }
+    }
+    .bottom {
+      .new-launch {
+        display: none;
+      }
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .tick {
+          font-size: clamp(9px, 3vw, 11px);
+          background-color: white;
+          color: var(--color-black);
+          border-radius: 100px;
+          padding: 0.1rem;
+        }
+      }
+      span {
+        opacity: 0.5;
+        font-size: clamp(10px, 4.1vw, 13px);
+      }
+      h4 {
+        display: flex;
+        gap: 0.5rem;
+        font-size: clamp(13px, 4.1vw, 13px);
+        white-space: nowrap;
+        .label {
+          @include flex();
+          gap: 0.2rem;
+          padding: 0.2rem 0.4rem;
+          border-radius: 0.3rem;
+          background-color: #3a3a3a;
+          font-size: clamp(8px, 2.5vw, 10px);
+          i {
+            color: #6a6e73;
+          }
+        }
+      }
+      ul {
+        position: relative;
+        @include flex-col(1rem);
+        .center-li {
+          position: relative;
+          color: rgba(255, 255, 255, 0.509);
+          font-size: clamp(10px, 3.5vw, 12px);
+          white-space: nowrap;
+
+          &:before {
+            content: "";
+            width: 30%;
+            height: 1px;
+            background-color: white;
+            background: linear-gradient(
+              to right,
+              transparent 5%,
+              rgba(255, 255, 255, 0.363) 70%
+            );
+            transform: translateY(10%);
+          }
+          &:after {
+            content: "";
+            width: 30%;
+            height: 1px;
+            background-color: white;
+            background: linear-gradient(
+              to left,
+              transparent 5%,
+              rgba(255, 255, 255, 0.363) 70%
+            );
+            transform: translateY(10%);
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .page1 {
@@ -796,6 +920,43 @@ section {
               gap: 1.5rem;
             }
           }
+        }
+      }
+    }
+  }
+  .page9 {
+    padding-inline: 8rem;
+    .inner {
+      background: linear-gradient(158deg, #e8602e 1%, #0f0f11 25%);
+      flex-direction: row;
+      .top {
+        width: 60%;
+        flex-direction: row;
+        align-items: flex-start;
+        .top-content {
+          gap: 2rem;
+          align-items: flex-start;
+          button {
+            padding: 1rem 4rem;
+          }
+        }
+      }
+      .bottom {
+        width: 40%;
+        @include flex-col();
+        ul {
+          gap: 1.5rem;
+        }
+        .new-launch {
+          margin-bottom: 90px;
+          display: block;
+          align-self: flex-end;
+          background-color: #35221f;
+          color: white;
+          border: 1.5px solid #be4f2731;
+          padding: 0.5rem 1.5rem;
+          border-radius: 50px;
+          font-size: clamp(14px, 1.2vw, 18px);
         }
       }
     }
