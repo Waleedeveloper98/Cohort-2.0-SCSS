@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-background: #000000;
+  --color-white: #ffffff;
+  --color-highlight: #ffa80a;
+  --color-secondary: #a6a4a4;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+nav .logo img {
+  height: 17px;
+}
+nav .logo h3 {
+  font-weight: 500;
+  font-size: 5vw;
+}
+nav .menu {
+  color: var(--color-white);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+nav .right {
+  display: none;
+}
+
+main {
+  width: 100%;
+  background-color: var(--color-background);
+}
+
+.homePage {
+  width: 100%;
+  padding-inline: 1rem;
+  color: var(--color-white);
+}
+.homePage .inner {
+  padding-block: 3.5rem;
+}
+.homePage .inner h1 {
+  text-transform: capitalize;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 10vw;
+}
+.homePage .inner h1 span {
+  color: var(--color-highlight);
+}
+.homePage .inner .recipes-container .recipes-list-line {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.homePage .inner .recipes-container .recipes-list-line .arrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+.homePage .inner .recipes-container .recipes-list-line .arrows i {
+  cursor: pointer;
+  font-size: 10vw;
+  color: var(--color-white);
+}
+.homePage .inner .recipes-container .recipes-list-line .arrows i:nth-child(2) {
+  color: var(--color-secondary);
+}
+.homePage .inner .recipes-container .recipes-list-line .recipe {
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.homePage .inner .recipes-container .recipes-list-line .recipe img {
+  width: 85%;
+}
+.homePage .inner .recipes-container .recipes-list-line .recipe .recipe-detail {
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-transform: capitalize;
+}
+.homePage .inner .recipes-container .recipes-list-line .recipe .recipe-detail .recipe-name {
+  font-weight: 300;
+  font-size: 4vw;
+}
+.homePage .inner .recipes-container .recipes-list-line .recipe .recipe-detail .recipe-price {
+  font-size: 6vw;
+}
+.homePage .inner .recipes-container .order-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding-block: 1rem;
+}
+.homePage .inner .recipes-container .order-container p {
+  color: var(--color-secondary);
+  font-size: 4vw;
+  line-height: 1.2;
+}
+.homePage .inner .recipes-container .order-container .cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.homePage .inner .recipes-container .order-container .cta-btns button {
+  cursor: pointer;
+  border-top: 2px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  background-color: transparent;
+  color: var(--color-white);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+.homePage .inner .recipes-container .order-container .cta-btns button:nth-child(1) {
+  border: none;
+  background-color: var(--color-highlight);
+}/*# sourceMappingURL=style.css.map */
