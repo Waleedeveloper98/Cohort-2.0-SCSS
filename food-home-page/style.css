@@ -198,6 +198,7 @@ section {
   border-radius: 50px;
   text-transform: capitalize;
   transition: all ease 0.3s;
+  white-space: nowrap;
 }
 .homePage .inner .recipes-container .order-container .cta-btns button:nth-child(1) {
   border: none;

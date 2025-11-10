@@ -195,6 +195,7 @@ section {
             border-radius: 50px;
             text-transform: capitalize;
             transition: all ease 0.3s;
+            white-space: nowrap;
             &:nth-child(1) {
               border: none;
               background-color: var(--color-highlight);
@@ -412,12 +413,13 @@ section {
           display: block !important;
         }
       }
-    }.homePage-btm{
-        flex-direction: row !important;
-        justify-content: space-between;
-        .left{
-            gap: 1.2rem !important;
-        }
+    }
+    .homePage-btm {
+      flex-direction: row !important;
+      justify-content: space-between;
+      .left {
+        gap: 1.2rem !important;
+      }
     }
   }
 }
